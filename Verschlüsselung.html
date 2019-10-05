@@ -1,9 +1,122 @@
 <html>
-<head>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Webseite von Luca Schm. und Daniel St.</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      .spacer {
+        margin-top: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+        padding-top: 10px;
+      }
+    </style>
+  </head>
+  <style>
+    footer {
+      background-color: green;
+    }
+  </style>
 
-</head>
+  <div class="navigations-bar">
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+      <a class="navbar-brand" href="#">Navbar</a>
 
-<body>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#collapsibleNavbar"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-</body>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Startsite</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <div class="row spacer">
+    <div class="col-md">
+      <h5>Cäesar verfahren:</h5>
+    </div>
+  </div>
+  <div class="row spacer">
+    <div class="col-md">
+      Das Cäesar verfahren arbeitet auf grundlage des einfachen verschiebens des
+      Alphabetes. Aufgrund von nur 25 möglichen Kombinationen ist dies verfahren
+      heutzutage in Sekunden geknackt. Unten ist eine Demo des Cäesar
+      verfahrens. Diese verschiebt das Alphabet um 7 stellen.
+    </div>
+  </div>
+  <div class="row spacer">
+    <div class="col-md">
+      <input class="form-control" placeholder="Input" id="inputCäesar" />
+    </div>
+    <div class="col-md">
+      <input
+        class="form-control"
+        type="text"
+        placeholder="OUTPUT"
+        id="outputCäesar"
+        readonly
+      />
+    </div>
+    <div class="col-md">
+      <button tpye="button" class="btn btn-primary" id="CäesarCodieren">
+        Codieren
+      </button>
+    </div>
+    <div class="col-md">
+      Dabei werden kleine Buchstaben, wie z.B. "a" wieder ins kleine Alphabet
+      verschoben. Und Große Buchstaben kommen ins Große Alphabet. Zahlen werden
+      ebenso Seperat verschoben. Sonderzeichen sind der einfachkeit halber
+      ausgelassen worden.
+    </div>
+  </div>
 </html>
+<script>
+  $("#CäesarCodieren").on("click", function() {
+    var Input = $("#inputCäesar").val();
+    var Output = "";
+    for (var i in Input) {
+      var KeyCode = Input.charCodeAt(i);
+      if (KeyCode > 96 && KeyCode < 116) {
+        KeyCode = KeyCode + 7;
+        Output += String.fromCharCode(KeyCode);
+      } else if (KeyCode > 115 && KeyCode < 123) {
+        KeyCode = KeyCode - 26 + 7;
+        Output += String.fromCharCode(KeyCode);
+      } else if (KeyCode > 64 && KeyCode < 84) {
+        KeyCode = KeyCode + 7;
+        Output += String.fromCharCode(KeyCode);
+      } else if (KeyCode > 83 && KeyCode < 91) {
+        KeyCode = KeyCode - 26 + 7;
+        Output += String.fromCharCode(KeyCode);
+      }
+    }
+    $("#outputCäesar").val(Output);
+  });
+</script>
