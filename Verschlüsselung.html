@@ -29,74 +29,76 @@
       background-color: green;
     }
   </style>
+  <body>
+    <div class="navigations-bar">
+      <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+        <a class="navbar-brand" href="#">Navbar</a>
 
-  <div class="navigations-bar">
-    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
-      <a class="navbar-brand" href="#">Navbar</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#collapsibleNavbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#collapsibleNavbar"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="collapsibleNavbar">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Startsite</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-        </ul>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Startsite</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="row spacer">
+      <div class="col-md">
+        <h5>Cäesar verfahren:</h5>
       </div>
-    </nav>
-  </div>
-  <div class="row spacer">
-    <div class="col-md">
-      <h5>Cäesar verfahren:</h5>
     </div>
-  </div>
-  <div class="row spacer">
-    <div class="col-md">
-      Das Cäesar verfahren arbeitet auf grundlage des einfachen verschiebens des
-      Alphabetes. Aufgrund von nur 25 möglichen Kombinationen ist dies verfahren
-      heutzutage in Sekunden geknackt. Unten ist eine Demo des Cäesar
-      verfahrens. Diese verschiebt das Alphabet um 7 stellen.
+    <div class="row spacer">
+      <div class="col-md">
+        Das Cäesar verfahren arbeitet auf grundlage des einfachen verschiebens
+        des Alphabetes. Aufgrund von nur 25 möglichen Kombinationen ist dies
+        verfahren heutzutage in Sekunden geknackt. Unten ist eine Demo des
+        Cäesar verfahrens. Diese verschiebt das Alphabet um 7 stellen.
+      </div>
     </div>
-  </div>
-  <div class="row spacer">
-    <div class="col-md">
-      <input class="form-control" placeholder="Input" id="inputCäesar" />
+    <div class="row spacer">
+      <div class="col-md">
+        <input class="form-control" placeholder="Input" id="inputCäesar" />
+      </div>
+      <div class="col-md">
+        <input
+          class="form-control"
+          type="text"
+          placeholder="OUTPUT"
+          id="outputCäesar"
+          readonly
+        />
+      </div>
+      <div class="col-md">
+        <button tpye="button" class="btn btn-primary" id="CäesarCodieren">
+          Codieren
+        </button>
+      </div>
+      <div class="col-md">
+        Dabei werden kleine Buchstaben, wie z.B. "a" wieder ins kleine Alphabet
+        verschoben. Und Große Buchstaben kommen ins Große Alphabet. Zahlen
+        werden ebenso Seperat verschoben. Sonderzeichen sind der einfachkeit
+        halber ausgelassen worden.
+      </div>
     </div>
-    <div class="col-md">
-      <input
-        class="form-control"
-        type="text"
-        placeholder="OUTPUT"
-        id="outputCäesar"
-        readonly
-      />
-    </div>
-    <div class="col-md">
-      <button tpye="button" class="btn btn-primary" id="CäesarCodieren">
-        Codieren
-      </button>
-    </div>
-    <div class="col-md">
-      Dabei werden kleine Buchstaben, wie z.B. "a" wieder ins kleine Alphabet
-      verschoben. Und Große Buchstaben kommen ins Große Alphabet. Zahlen werden
-      ebenso Seperat verschoben. Sonderzeichen sind der einfachkeit halber
-      ausgelassen worden.
-    </div>
-  </div>
+  </body>
 </html>
+
 <script>
   $("#CäesarCodieren").on("click", function() {
     var Input = $("#inputCäesar").val();
@@ -114,6 +116,8 @@
         Output += String.fromCharCode(KeyCode);
       } else if (KeyCode > 83 && KeyCode < 91) {
         KeyCode = KeyCode - 26 + 7;
+        Output += String.fromCharCode(KeyCode);
+      } /* Zahlenverschiebung noch nicht vorhanden */ else{
         Output += String.fromCharCode(KeyCode);
       }
     }
