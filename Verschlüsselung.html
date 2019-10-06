@@ -58,7 +58,6 @@
       </nav>
     </div>
 
-
     <!-- Cäsar neu -->
     <div class="row spacer">
       <div class="col-md col-sm">
@@ -77,14 +76,14 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-md col-sm py-2">
+              <div class="col-md col-sm-3 py-2">
                 <input
                   class="form-control"
                   placeholder="Input"
                   id="inputCäesar"
                 />
               </div>
-              <div class="col-md col-sm py-2">
+              <div class="col-md col-sm-3 py-2">
                 <input
                   class="form-control"
                   type="text"
@@ -102,7 +101,7 @@
                   Codieren
                 </button>
               </div>
-              <div class="col-md col-sm px-5">
+              <div class="col-md col-sm-6 ">
                 Das Cäesar verfahren arbeitet auf grundlage des einfachen
                 verschiebens des Alphabetes. Aufgrund von nur 25 möglichen
                 Kombinationen ist dies verfahren heutzutage in Milliesekunden
@@ -114,8 +113,8 @@
         </div>
       </div>
     </div>
-<!-- Cäsar ENDE -->
-<!-- Vigenere -->
+    <!-- Cäsar ENDE -->
+    <!-- Vigenere -->
     <div class="row spacer">
       <div class="col-md col-sm">
         <div class="card">
@@ -124,7 +123,8 @@
           </div>
           <div class="card-body">
             <div class="row">
-              <div class="col-md col-sm py-2">
+              <!-- Text incl.DEMO -->
+              <div class="col-xl">
                 Das Viginär System ist komplizierter als das Cäesar verfahren,
                 jedoch nicht unknackbar. Beim Viginär verfahren wird ein
                 Schlüssel benötigt. Dieser Schlüssel wird zum Codieren sowie dem
@@ -143,13 +143,25 @@
                 Kreuzungspunkt ist nun der neue Buchstabe. Dies führt man für
                 jeden Buchstaben des zu verschlüsselnen Textes durch und hat
                 dann die Verschlüsselte Nachricht.
+                <div class="row">
+                  <div class="col-md py-2">
+                    <input class="form-control" />
+                  </div>
+                  <div class="col-md py-2">
+                    <input class="form-control" />
+                  </div>
+                </div>
               </div>
-              <img
-                src="img/VigenereAutokey1.jpg"
-                class="img-fluid rounded float-right"
-                style="width:300p;height:300px"
-              />
-            
+              <!-- Text incl. demo ende -->
+              <!-- img -->
+              <div class="col-xl-3 text-center">
+                <img
+                  src="img/VigenereAutokey1.jpg"
+                  class="img-fluid rounded"
+                  style="margin-left:auto;margin-right:auto;"
+                />
+              </div>
+              <!-- img ende -->
             </div>
           </div>
         </div>
