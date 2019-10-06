@@ -22,6 +22,7 @@
         margin-right: 10px;
         padding-top: 10px;
       }
+
       /* !ÄNDERN! */
     </style>
   </head>
@@ -50,7 +51,7 @@
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" >Link</a>
+              <a class="nav-link">Link</a>
             </li>
           </ul>
         </div>
@@ -136,23 +137,63 @@
                   readonly
                 />
               </div>
-              <div class="col-md col-sm py-2">
-                  <button
+              <div class="col-md-2 col-sm-2 py-2">
+                <button
                   type="button"
-                  class="btn btn-primary px-5 "
+                  class="btn btn-primary px-3 "
                   id="CäesarCodieren"
                 >
                   Codieren
                 </button>
               </div>
+              <div class="col-md col-sm px-5">
+                Das Cäesar verfahren arbeitet auf grundlage des einfachen
+                verschiebens des Alphabetes. Aufgrund von nur 25 möglichen
+                Kombinationen ist dies verfahren heutzutage in Milliesekunden
+                geknackt. Unten ist eine Demo des Cäesar verfahrens. Diese
+                verschiebt das Alphabet um 7 stellen.
+              </div>
             </div>
           </div>
-          <div class="card-footer" >
-              Das Cäesar verfahren arbeitet auf grundlage des einfachen
-              verschiebens des Alphabetes. Aufgrund von nur 25 möglichen
-              Kombinationen ist dies verfahren heutzutage in Milliesekunden
-              geknackt. Unten ist eine Demo des Cäesar verfahrens. Diese
-              verschiebt das Alphabet um 7 stellen.
+        </div>
+      </div>
+    </div>
+
+    <div class="row spacer">
+      <div class="col-md col-sm">
+        <div class="card">
+          <div class="card-header">
+            Viginär
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md col-sm py-2">
+                Das Viginär System ist komplizierter als das Cäesar verfahren,
+                jedoch nicht unknackbar. Beim Viginär verfahren wird ein
+                Schlüssel benötigt. Dieser Schlüssel wird zum Codieren sowie dem
+                Decodieren verwendet.<br />
+                Jedem Buchstaben wird ein Buchstabe des Schlüssels zugewiesen.
+                Falls der Schlüssel kleiner ist als der Geheimtext wird der
+                Schlüssel soweit wiederholt, bis alle Buchstaben des Textes
+                einen Buchstaben des Schlüssels zugewiesen bekommen haben.
+                Bsp:<br />
+                GEHEIMTEXT<br />
+                TEXTTEXTTEX<br />
+                Wie man auf dem Bild schon erkennen kann, ist es Praktisch eine
+                Übersetzungstabelle. Man wählt nun den Buchstaben G aus markiert
+                sich dann die Spalte des G´s. Danach nimmt man sich das T vor
+                und markiert sich die Zeile des T´s. Der Buchstabe am
+                Kreuzungspunkt ist nun der neue Buchstabe. Dies führt man für
+                jeden Buchstaben des zu verschlüsselnen Textes durch und hat
+                dann die Verschlüsselte Nachricht.
+              </div>
+              <img
+                src="img/VigenereAutokey1.jpg"
+                class="img-fluid rounded float-right"
+                style="width:300p;height:300px"
+              />
+            
+            </div>
           </div>
         </div>
       </div>
