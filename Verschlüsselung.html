@@ -144,11 +144,47 @@
                 jeden Buchstaben des zu verschlüsselnen Textes durch und hat
                 dann die Verschlüsselte Nachricht.
                 <div class="row">
-                  <div class="col-md py-2">
-                    <input class="form-control" />
+                  <div class="col-md py-2 my-1">
+                    <input
+                      class="form-control"
+                      id="viginereInput"
+                      placeholder="Input"
+                    />
+                  </div>
+                  <div class="col-md py-2 my-1">
+                    <input
+                      class="form-control"
+                      id="viginereKey"
+                      placeholder="Key"
+                    />
+                  </div>
+                  <div class="col-md py-2 my-1">
+                    <input
+                      class="form-control"
+                      id="viginereOutput"
+                      placeholder="Output"
+                      disabled="disabled"
+                    />
                   </div>
                   <div class="col-md py-2">
-                    <input class="form-control" />
+                    <div class="row">
+                      <div class="col-md my-1">
+                        <button
+                          class="btn btn-primary px-4"
+                          id="viginereCodieren"
+                        >
+                          Codieren
+                        </button>
+                      </div>
+                      <div class="col-md my-1">
+                        <button
+                          class="btn btn-primary px-4"
+                          id="viginereDecodieren"
+                        >
+                          Decodieren
+                        </button>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -194,5 +230,53 @@
       }
     }
     $("#outputCäesar").val(Output);
+  });
+
+  $("#viginereCodieren").on("click", function() {
+    var input = $("#viginereInput").val();
+    var key = $("#viginereKey").val();
+    var output = "";
+    var input = input.toUpperCase();
+    var spaceArray= [];
+    for(var a in input){
+      if(input[a]==" "){
+        
+        spaceArray.push(a);
+      }
+    }
+    input = input.replace(/\s/g, "")
+    for (var i in input) {
+      var char = input[i];
+      var code = char.charCodeAt(0);
+      var key2;
+      
+     
+          key2 = key[i % key.length];
+         
+      if(code!=32){
+      key2 = key2.charCodeAt(0);
+      key2 -= 65;
+      if (code != 32) {
+        if (code > 64 && code < 91) {
+          code = code + key2;
+          if (code > 89) {
+            code -= 26;
+          }
+          if (code < 65) {
+            code += 26;
+          }
+        }
+      }
+      }
+      char = String.fromCharCode(code);
+      a=0;
+      for(a in spaceArray){
+        if(i==spaceArray[a]){
+          output+=" ";
+        }
+      }
+      output += char;
+    }
+    $("#viginereOutput").val(output);
   });
 </script>
