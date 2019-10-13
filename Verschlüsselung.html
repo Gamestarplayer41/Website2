@@ -142,7 +142,13 @@
                 und markiert sich die Zeile des T´s. Der Buchstabe am
                 Kreuzungspunkt ist nun der neue Buchstabe. Dies führt man für
                 jeden Buchstaben des zu verschlüsselnen Textes durch und hat
-                dann die Verschlüsselte Nachricht.
+                dann die Verschlüsselte Nachricht.<br />
+                In der Demo werden spaces herausgefiltert und im falle des
+                Inputs wieder eingesetzt. Spaces im Key werden missachtet. Beide
+                Strings werden zu Uppercase convertiert, da sonst der
+                Algorithmus seine einfachkeit verliert (Schau zwecke).<br />
+                (Randinfo: Das Beispiel von Uwe Debacher ist fehlerhaft und
+                filtert keine leerzeichen)
                 <div class="row">
                   <div class="col-md py-2 my-1">
                     <input
@@ -233,50 +239,104 @@
   });
 
   $("#viginereCodieren").on("click", function() {
-    var input = $("#viginereInput").val();
+    viginereCodieren();
+    /*  var input = $("#viginereInput").val();
     var key = $("#viginereKey").val();
     var output = "";
     var input = input.toUpperCase();
-    var spaceArray= [];
-    for(var a in input){
-      if(input[a]==" "){
-        
+    var spaceArray = [];
+    for (var a in input) {
+      if (input[a] == " ") {
         spaceArray.push(a);
       }
     }
-    input = input.replace(/\s/g, "")
+    input = input.replace(/\s/g, "");
     for (var i in input) {
       var char = input[i];
       var code = char.charCodeAt(0);
       var key2;
-      
-     
-          key2 = key[i % key.length];
-         
-      if(code!=32){
-      key2 = key2.charCodeAt(0);
-      key2 -= 65;
+
+      key2 = key[i % key.length];
+
       if (code != 32) {
-        if (code > 64 && code < 91) {
-          code = code + key2;
-          if (code > 89) {
-            code -= 26;
-          }
-          if (code < 65) {
-            code += 26;
+        key2 = key2.charCodeAt(0);
+        key2 -= 65;
+        if (code != 32) {
+          if (code > 64 && code < 91) {
+            code = code + key2;
+            if (code > 89) {
+              code -= 26;
+            }
+            if (code < 65) {
+              code += 26;
+            }
           }
         }
       }
-      }
       char = String.fromCharCode(code);
-      a=0;
-      for(a in spaceArray){
-        if(i==spaceArray[a]){
-          output+=" ";
+      a = 0;
+      for (a in spaceArray) {
+        if (i == spaceArray[a]) {
+          output += " ";
         }
       }
       output += char;
     }
-    $("#viginereOutput").val(output);
+    $("#viginereOutput").val(output); */
   });
+
+  function viginereCodieren() {
+    var input = $("#viginereInput").val();
+    var key = $("#viginereKey").val();
+    var output = "";
+    var spacesInput = [];
+    var spacesKey = [];
+
+    for (var i in input) {
+      if (/^\s$/.test(input[i])) {
+        spacesInput.push(i);
+      }
+    }
+    for (var i in key) {
+      if (/^\s$/.test(key[i])) {
+        spacesKey.push(i);
+      }
+    }
+    input = input.replace(/\s/g, "");
+    key = key.replace(/\s/g, "");
+
+    input = input.toUpperCase();
+    key = key.toUpperCase();
+    for (var i in input) {
+      var char = input[i];
+      char = char.charCodeAt(0);
+
+      var key2;
+
+      key2 = key[i % key.length];
+      key2 = key2.charCodeAt(0);
+      key2 -= 65;
+      if (char > 64 && char < 91) {
+        char += key2;
+        if (char > 89) {
+          char -= 26;
+        }
+        if (char < 65) {
+          char += 26;
+        }
+      }
+      char = String.fromCharCode(char);
+
+      output += char;
+      for (var a in spacesInput) {
+        var z = parseInt(i);
+        z++;
+        console.log(z);
+        if (spacesInput[a] == z) {
+          output += " ";
+        }
+      }
+    }
+    $("#viginereOutput").val(output);
+  }
 </script>
