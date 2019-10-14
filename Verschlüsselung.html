@@ -22,6 +22,14 @@
         margin-right: 10px;
         padding-top: 10px;
       }
+      footer {
+        background-color: grey;
+        color: rgb(221, 221, 221);
+      }
+      .col-centered{
+        float:none;
+        margin:0 auto;
+      }
 
       /* !ÄNDERN! */
     </style>
@@ -29,7 +37,9 @@
   <body>
     <div class="navigations-bar">
       <nav class="navbar navbar-expand-md bg-dark navbar-dark">
-        <a class="navbar-brand" style="color:white">Navigation</a>
+        <a class="navbar-brand" style="color:white"
+          >Webseite von Daniel St. und Luca Schm.</a
+        >
 
         <button
           class="navbar-toggler"
@@ -68,10 +78,10 @@
           <div class="card-body">
             <div class="row">
               <div class="col-md col-sm">
-                Das Cäesar verfahren arbeitet auf grundlage des einfachen
+                Das Cäsar verfahren arbeitet auf grundlage des einfachen
                 verschiebens des Alphabetes. Aufgrund von nur 25 möglichen
                 Kombinationen ist dies verfahren heutzutage in Milliesekunden
-                geknackt. Unten ist eine Demo des Cäesar verfahrens. Diese
+                geknackt. Unten ist eine Demo des Cäsar verfahrens. Diese
                 verschiebt das Alphabet um 7 stellen.
               </div>
             </div>
@@ -80,7 +90,7 @@
                 <input
                   class="form-control"
                   placeholder="Input"
-                  id="inputCäesar"
+                  id="inputCäsar"
                 />
               </div>
               <div class="col-md col-sm-3 py-2">
@@ -88,7 +98,7 @@
                   class="form-control"
                   type="text"
                   placeholder="OUTPUT"
-                  id="outputCäesar"
+                  id="outputCäsar"
                   readonly
                 />
               </div>
@@ -96,16 +106,16 @@
                 <button
                   type="button"
                   class="btn btn-primary px-3 "
-                  id="CäesarCodieren"
+                  id="CäsarCodieren"
                 >
                   Codieren
                 </button>
               </div>
               <div class="col-md col-sm-6 ">
-                Das Cäesar verfahren arbeitet auf grundlage des einfachen
+                Das Cäsar verfahren arbeitet auf grundlage des einfachen
                 verschiebens des Alphabetes. Aufgrund von nur 25 möglichen
                 Kombinationen ist dies verfahren heutzutage in Milliesekunden
-                geknackt. Unten ist eine Demo des Cäesar verfahrens. Diese
+                geknackt. Unten ist eine Demo des Cäsar verfahrens. Diese
                 verschiebt das Alphabet um 7 stellen.
               </div>
             </div>
@@ -119,14 +129,14 @@
       <div class="col-md col-sm">
         <div class="card">
           <div class="card-header">
-            Viginär
+            Viginere
           </div>
           <div class="card-body">
             <div class="row">
               <!-- Text incl.DEMO -->
               <div class="col-xl">
-                Das Viginär System ist komplizierter als das Cäesar verfahren,
-                jedoch nicht unknackbar. Beim Viginär verfahren wird ein
+                Das Viginere System ist komplizierter als das Cäsar verfahren,
+                jedoch nicht unknackbar. Beim Viginere verfahren wird ein
                 Schlüssel benötigt. Dieser Schlüssel wird zum Codieren sowie dem
                 Decodieren verwendet.<br />
                 Jedem Buchstaben wird ein Buchstabe des Schlüssels zugewiesen.
@@ -134,8 +144,10 @@
                 Schlüssel soweit wiederholt, bis alle Buchstaben des Textes
                 einen Buchstaben des Schlüssels zugewiesen bekommen haben.
                 Bsp:<br />
-                GEHEIMTEXT<br />
-                TEXTTEXTTEX<br />
+                <b>
+                  GEHEIMTEXT<br />
+                  TEXTTEXTTEX<br />
+                </b>
                 Wie man auf dem Bild schon erkennen kann, ist es Praktisch eine
                 Übersetzungstabelle. Man wählt nun den Buchstaben G aus markiert
                 sich dann die Spalte des G´s. Danach nimmt man sich das T vor
@@ -150,21 +162,21 @@
                 (Randinfo: Das Beispiel von Uwe Debacher ist fehlerhaft und
                 filtert keine leerzeichen)
                 <div class="row">
-                  <div class="col-md py-2 my-1">
+                  <div class="col-md">
                     <input
                       class="form-control"
                       id="viginereInput"
                       placeholder="Input"
                     />
                   </div>
-                  <div class="col-md py-2 my-1">
+                  <div class="col-md">
                     <input
                       class="form-control"
                       id="viginereKey"
                       placeholder="Key"
                     />
                   </div>
-                  <div class="col-md py-2 my-1">
+                  <div class="col-md ">
                     <input
                       class="form-control"
                       id="viginereOutput"
@@ -172,22 +184,24 @@
                       disabled="disabled"
                     />
                   </div>
-                  <div class="col-md py-2">
+                  <div class="col-md">
                     <div class="row">
-                      <div class="col-md my-1">
-                        <button
-                          class="btn btn-primary px-4"
-                          id="viginereCodieren"
-                        >
+                      <div class="col-md">
+                        <button class="btn btn-primary" id="viginereCodieren">
                           Codieren
                         </button>
                       </div>
-                      <div class="col-md my-1">
+                      <div class="col-md ">
                         <button
-                          class="btn btn-primary px-4"
+                          class="btn btn-primary "
                           id="viginereDecodieren"
                         >
                           Decodieren
+                        </button>
+                      </div>
+                      <div class="col-md">
+                        <button class="btn btn-primary" id="viginereSwap">
+                          Swappen
                         </button>
                       </div>
                     </div>
@@ -206,16 +220,40 @@
               <!-- img ende -->
             </div>
           </div>
+          <div class="card-footer">
+            Teilweise aus Uwe Debachers Dokument entnommen, auch wenn der
+            Algorithmus fehlerhaft ist.
+          </div>
         </div>
       </div>
     </div>
     <!-- Vigenere ENDE -->
+    <div class="row spacer">
+      <div class="col-md col-sm">
+        <div class="card">
+          <div class="card-header">
+            RSA-Algorithmus
+          </div>
+          <div class="card-body"></div>
+          <div class="card-footer">
+            QUELLEN:
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
+  <footer style="margin-top:10px;">
+    <div class="col-md-5 col-centered"
+    <center>
+      Aufgrund der komplexität und der Interaktiviät der Algorithmen wurden
+      Frameworks verwendet. Z.b. wird JQuery zum Eventlistener. Bootstrap wurde fürs Design verwendet.
+    </center>
+  </footer>
 </html>
 
 <script type="text/javascript">
-  $("#CäesarCodieren").on("click", function() {
-    var Input = $("#inputCäesar").val();
+  $("#CäsarCodieren").on("click", function() {
+    var Input = $("#inputCäsar").val();
     var Output = "";
     for (var i in Input) {
       var KeyCode = Input.charCodeAt(i);
@@ -235,71 +273,75 @@
         Output += String.fromCharCode(KeyCode);
       }
     }
-    $("#outputCäesar").val(Output);
+    $("#outputCäsar").val(Output);
   });
 
   $("#viginereCodieren").on("click", function() {
     viginereCodieren();
-    /*  var input = $("#viginereInput").val();
-    var key = $("#viginereKey").val();
-    var output = "";
-    var input = input.toUpperCase();
-    var spaceArray = [];
-    for (var a in input) {
-      if (input[a] == " ") {
-        spaceArray.push(a);
-      }
-    }
-    input = input.replace(/\s/g, "");
-    for (var i in input) {
-      var char = input[i];
-      var code = char.charCodeAt(0);
-      var key2;
-
-      key2 = key[i % key.length];
-
-      if (code != 32) {
-        key2 = key2.charCodeAt(0);
-        key2 -= 65;
-        if (code != 32) {
-          if (code > 64 && code < 91) {
-            code = code + key2;
-            if (code > 89) {
-              code -= 26;
-            }
-            if (code < 65) {
-              code += 26;
-            }
-          }
-        }
-      }
-      char = String.fromCharCode(code);
-      a = 0;
-      for (a in spaceArray) {
-        if (i == spaceArray[a]) {
-          output += " ";
-        }
-      }
-      output += char;
-    }
-    $("#viginereOutput").val(output); */
   });
 
-  function viginereCodieren() {
+  $("#viginereDecodieren").on("click", function() {
+    viginereDecodieren();
+  });
+
+  function viginereDecodieren() {
     var input = $("#viginereInput").val();
     var key = $("#viginereKey").val();
     var output = "";
     var spacesInput = [];
-    var spacesKey = [];
 
     for (var i in input) {
       if (/^\s$/.test(input[i])) {
         spacesInput.push(i);
       }
     }
-    for (var i in key) {
-      if (/^\s$/.test(key[i])) {
-        spacesKey.push(i);
+
+    input = input.replace(/\s/g, "");
+    key = key.replace(/\s/g, "");
+
+    input = input.toUpperCase();
+    key = key.toUpperCase();
+
+    for (var i in input) {
+      var char = input[i];
+      char = char.charCodeAt(0);
+
+      var key2;
+
+      key2 = key[i % key.length];
+      key2 = key2.charCodeAt(0);
+      key2 -= 65;
+      if (char > 64 && char < 91) {
+        char -= key2;
+        if (char > 89) {
+          char -= 26;
+        }
+        if (char < 65) {
+          char += 26;
+        }
+      }
+      char = String.fromCharCode(char);
+      output += char;
+      for (var a in spacesInput) {
+        var z = parseInt(i);
+        z++;
+        if (spacesInput[a] == z) {
+          output += " ";
+        }
+      }
+    }
+    $("#viginereOutput").val(output);
+  }
+
+  function viginereCodieren() {
+    var input = $("#viginereInput").val();
+    var key = $("#viginereKey").val();
+    var output = "";
+    var spacesInput = [];
+
+    for (var i in input) {
+      if (/^\s$/.test(input[i])) {
+        spacesInput.push(i);
       }
     }
     input = input.replace(/\s/g, "");
