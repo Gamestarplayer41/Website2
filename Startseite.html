@@ -16,21 +16,8 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="design.css" />
-    <style type="text/css">
-      .spaceTopCard {
-        margin-top: 10px;
-      }
-      .code-block {
-        font-family: Monaco, monospace;
-        line-height: 100%;
-        background-color: #eee;
-        padding: 0.2em;
-        letter-spacing: -0.05em;
-        word-break: normal;
-        border-radius: 5px;
-      }
-    </style>
   </head>
+
   <body>
     <!-- Navbar -->
     <div class="navigations-bar">
@@ -142,6 +129,13 @@
                         href="#list-enumerations"
                         >Aufzählungen</a
                       >
+                      <a
+                        class="list-group-item list-group-item-action"
+                        id="list-images-list"
+                        data-toggle="list"
+                        href="#list-images"
+                        >Bilder</a
+                      >
                     </div>
                   </div>
                   <div class="col-md-8">
@@ -188,9 +182,94 @@
                           </div>
                         </div>
                       </div>
-                      <div class="tab-pane fade" id="list-tables">Tabellen</div>
+                      <div class="tab-pane fade" id="list-tables">
+                        <div class="row">
+                          <div class="col-md">
+                            Bei Tabellen gibt es mehrere Tags, welche man
+                            benutzen kann/muss. Der 1. und wichtigste wäre der
+                            &lt;table&gt; Tag. In diesem müssen dann alle
+                            weiteren Tags hinzugefügt werden. In der Tabelle hat
+                            man nun 2 Varianten. Einmal kann man den Tabellen
+                            Kopf fest definieren, oder man den Kopf als normale
+                            Zeile behandeln. Um den Kopf als Kopf fest zu
+                            definieren benötigt man den &lt;thead&gt; Tag, sowie
+                            den &lt;th&gt;(table-head) Tag. Die Daten werden
+                            dann im &lt;tbody&gt; Tag gespeichert. Dabei wird
+                            &lt;th&gt; durch &lt;td&gt;(table-data) ersetzt.
+                          </div>
+                          <!-- moderne Tabelle -->
+                          <div class="col-md">
+                            <div class="code-block">
+                              &lt;table&gt;<br />
+                              &nbsp;&lt;thead&gt;<br />
+                              <div class="table-border">
+                                &nbsp;&nbsp;&lt;tr&gt;
+                                &lt;th&gt;THead1&lt;/th&gt;
+                                &lt;th&lt;THead2&lt;/th&gt; &lt;/tr&gt;<br />
+                              </div>
+                              &nbsp;&lt;/thead&gt;<br />
+                              &nbsp;&lt;tbody&gt;<br />
+                              <div class="table-border">
+                                &nbsp;&nbsp;&lt;tr&gt;
+                                &lt;td&gt;TData1&lt;/td&gt;
+                                &lt;td&gt;TData2&lt;/td&gt; &lt;/tr&gt; <br />
+                              </div>
+                              &nbsp;&lt;/tbody&gt;<br />
+                              &lt;/table&gt;
+                            </div>
+                            <center>
+                              <table style="margin-top:10px;">
+                                <thead>
+                                  <tr>
+                                    <th>THead1</th>
+                                    <th>Thead2</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>TData1</td>
+                                    <td>TData2</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </center>
+                          </div>
+                          <!-- moderne tabelle ende -->
+                          <!-- Alte tabelle -->
+                          <div class="col-md">
+                            <div class="code-block">
+                              &lt;table&gt;<br />
+                              <div class="table-border">
+                                &nbsp;&lt;tr&gt; &lt;th&gt;THead1&lt;/th&gt;
+                                &lt;th&gt;Thead2&lt;/th&gt; &lt;/tr&gt;
+                              </div>
+                              <div class="table-border">
+                                &nbsp;&lt;tr&gt; &lt;td&gt;TData1&lt;/td&gt;
+                                &lt;td&gt;TData2&lt;/td&gt; &lt;/tr&gt;
+                              </div>
+                              &lt;/table&gt;
+                            </div>
+                            <center>
+                              <table style="margin-top:10px;">
+                                <tr>
+                                  <th>THead1</th>
+                                  <th>THead2</th>
+                                </tr>
+                                <tr>
+                                  <td>TData1</td>
+                                  <td>TData2</td>
+                                </tr>
+                              </table>
+                            </center>
+                          </div>
+                          <!-- alte tabelle ende -->
+                        </div>
+                      </div>
                       <div class="tab-pane fade" id="list-enumerations">
                         Aufzählungen
+                      </div>
+                      <div class="tab-pane fade" id="list-images">
+                        Bilder
                       </div>
                     </div>
                   </div>

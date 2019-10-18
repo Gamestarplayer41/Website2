@@ -16,4 +16,18 @@
     float: none;
     margin: 0 auto;
   }
-  
+  .spaceTopCard {
+    margin-top: 10px;
+  }
+  .code-block {
+    font-family: Monaco, monospace;
+    line-height: 100%;
+    background-color: #eee;
+    padding: 0.2em;
+    letter-spacing: -0.05em;
+    word-break: normal;
+    border-radius: 5px;
+  }
+  .table-border {
+    border: 1px solid black;
+  }
