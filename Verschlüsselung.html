@@ -15,30 +15,12 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
-    <style>
-      .spacer {
-        margin-top: 10px;
-        margin-left: 10px;
-        margin-right: 10px;
-        padding-top: 10px;
-      }
-      body {
-        font-family: "Arial";
-      }
-      footer {
-        background-color: grey;
-        margin-top:20px;
-        color: rgb(221, 221, 221);
-      }
-      .col-centered {
-        float: none;
-        margin: 0 auto;
-      }
-
-      /* !ÄNDERN! */
-    </style>
+    <link rel="stylesheet"
+    href="design.css"
+    />
   </head>
   <body>
+    <!-- Navbar -->
     <div class="navigations-bar">
       <nav class="navbar navbar-expand-md bg-dark navbar-dark">
         <a class="navbar-brand" style="color:white"
@@ -59,19 +41,22 @@
             <li class="nav-item">
               <a class="nav-link" href="index.html">Startseite</a>
             </li>
+            <li class="navbar-item">
+                <a class="nav-link" href="Startseite.html">Startseite in schön</a>
+            </li>
             <li class="nav-item">
               <a class="nav-link" href="Verschlüsselung.html"
                 >Verschlüsselung</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link">Link</a>
+              <a class="nav-link">Videoschnitt</a>
             </li>
           </ul>
         </div>
       </nav>
     </div>
-
+<!-- navbar ende -->
     <!-- Cäsar neu -->
     <div class="row spacer">
       <div class="col-md col-sm">
@@ -84,7 +69,7 @@
               <div class="col-md col-sm">
                 Das Cäsar verfahren arbeitet auf grundlage des einfachen
                 verschiebens des Alphabetes. Aufgrund von nur 25 möglichen
-                Kombinationen ist dies verfahren heutzutage in Milliesekunden
+                Kombinationen ist dies verfahren heutzutage in Millisekunden
                 geknackt. Unten ist eine Demo des Cäsar verfahrens. Diese
                 verschiebt das Alphabet um 7 stellen.
               </div>
@@ -247,7 +232,7 @@
     </div>
   </body>
   <footer>
-    <div class="col-md-5 col-centered">
+    <div class="col-md-5 col-centered text-center">
       Aufgrund der komplexität und der Interaktiviät der Algorithmen wurden
       Frameworks verwendet. Z.b. wird JQuery zum Eventlistener. Bootstrap wurde
       fürs Design verwendet.

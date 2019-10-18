@@ -1,0 +1,19 @@
+.spacer {
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-top: 10px;
+  }
+  body {
+    font-family: "Arial";
+  }
+  footer {
+    background-color: grey;
+    margin-top:20px;
+    color: rgb(221, 221, 221);
+  }
+  .col-centered {
+    float: none;
+    margin: 0 auto;
+  }
+  

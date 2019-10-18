@@ -1,0 +1,203 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Webseite von Luca Schm. und Daniel St.</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="design.css" />
+    <style type="text/css">
+      .spaceTopCard {
+        margin-top: 10px;
+      }
+      .code-block {
+        font-family: Monaco, monospace;
+        line-height: 100%;
+        background-color: #eee;
+        padding: 0.2em;
+        letter-spacing: -0.05em;
+        word-break: normal;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <div class="navigations-bar">
+      <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+        <a class="navbar-brand" style="color:white"
+          >Webseite von Daniel St. und Luca Schm.</a
+        >
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#collapsibleNavbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Startseite</a>
+            </li>
+            <li class="navbar-item">
+              <a class="nav-link" href="Startseite.html">Startseite in schön</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Verschlüsselung.html"
+                >Verschlüsselung</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link">Videoschnitt</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <!-- navbar ende  -->
+    <div class="row spacer">
+      <div class="col-md py-2 ">
+        <div class="card">
+          <div class="card-header">
+            Grundwissen
+          </div>
+          <div class="card-body">
+            <!-- Grundgerüst -->
+            <div class="card">
+              <div class="card-header">
+                Grundgerüst
+              </div>
+              <div class="card-body">
+                Das Grundgerüst einer Webseite besteht aus mehreren
+                bestandteilen. Um den Anfang einer HTML Seite anzuzeigen wird
+                immer der Tag &lt;html&gt; verwendet. Heutzutage haben nicht
+                alle HTML dateien in sich diesen Tag, da man in gewissen
+                Frameworks die HTML Dateien zusammen "rendert". D.h. in Datei a
+                ist das Gesamte Grundgerüst vorhanden und in Datei b ist eine
+                Tabelle vorhanden. Dann wird die Tabelle in Datei a hinzugefügt
+                und dann an den Clienten versendet. <br />
+                Zum Grundgerüst gehört z.b. auch der header, welcher durch den
+                Tag &lt;head&gt; geschaffen wird. In diesem werden alle
+                meta-daten gespeichert, wie z.b. die Codierung, oder die
+                Stylesheets/Scripts. Diese Daten sieht man i.d.R. nicht, weil
+                diese Anweisungen für den Browser sind. Dann kommt zum
+                Grundgerüst noch der Body tag hinzu. Dieser wird durch
+                &lt;body&gt; erzeugt. Im Body werden dann die anzuzeigenden
+                Elemente reingeschrieben. <br />
+                Zum Body gibt es noch den sogenannten Footer, dieser wird durch
+                den Tag &lt;footer&gt; erzeugt. Im Footer werden dann alle
+                Elemente eingefügt, die am Ende einer Webseite dargestellt
+                werden sollen. Dies wäre z.B. der Link zum Impressum.
+              </div>
+            </div>
+            <!-- Grundgerüst ende -->
+            <!-- Standard Tags -->
+            <div class="card spaceTopCard">
+              <div class="card-header">
+                Standart Tags
+              </div>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="list-group" id="list-tab" role="tablist">
+                      <a
+                        class="list-group-item list-group-item-action active"
+                        id="list-home-list"
+                        data-toggle="list"
+                        href="#tab-heading"
+                        >Überschrift/Normaler Text</a
+                      >
+                      <a
+                        class="list-group-item list-group-item-action"
+                        id="list-profile-list"
+                        data-toggle="list"
+                        href="#list-lists"
+                        >Listen</a
+                      >
+                      <a
+                        class="list-group-item list-group-item-action"
+                        id="list-messages-list"
+                        data-toggle="list"
+                        href="#list-tables"
+                        >Tabellen</a
+                      >
+                      <a
+                        class="list-group-item list-group-item-action"
+                        id="list-settings-list"
+                        data-toggle="list"
+                        href="#list-enumerations"
+                        >Aufzählungen</a
+                      >
+                    </div>
+                  </div>
+                  <div class="col-md-8">
+                    <div class="tab-content" id="nav-tabContent">
+                      <div class="tab-pane fade show active" id="tab-heading">
+                        Eine Überschrift wird mit dem Tag &lt;hX&gt; erstellt.
+                        Dabei wird das X durch durch eine Zahl zwischen 1-6
+                        ersetzt. Beispiel:<br />
+                        &lt;h1&gt;
+                        <h1>Das ist eine Große Überschrift</h1>
+                        &lt;h1&gt;<br />
+                        Normaler Text wird einfach in gewisse Elemente
+                        geschrieben. Z.B. in den Body Tag.
+                      </div>
+                      <div class="tab-pane fade" id="list-lists">
+                        Listen werden durch 2 verschiedene Tags realisiert. Es
+                        gibt die geordneten Listen und die Ungeordneten. Die
+                        georndeten werden dabei Numerisch abgezählt, wohingegen
+                        die Ungeordneten nur Kreise vor jedem Punkt haben (durch
+                        CSS natürlich veränderbar). Beispiel:<br />
+                        <div class="row">
+                          <div class="col-md">
+                            <div class="col-xl-4 code-block">
+                              &lt;ul&gt;<br />
+                              &nbsp;&lt;li&gt;Hey&lt;/li&gt;<br />
+                              &lt;/ul&gt;
+                            </div>
+                            <ul>
+                              <li>Hey</li>
+                            </ul>
+                          </div>
+                          <div class="col-md">
+                            <div class="col-xl-4 code-block">
+                              &lt;ol&gt;<br />
+                              &nbsp;&lt;li&gt;Hey&lt;/li&gt;<br />
+                              &lt;/ol&gt;
+                            </div>
+                            <ol>
+                              <li>Hey</li>
+                            </ol>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tab-pane fade" id="list-tables">Tabellen</div>
+                      <div class="tab-pane fade" id="list-enumerations">
+                        Aufzählungen
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- ende card -->
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
