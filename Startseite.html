@@ -227,7 +227,43 @@
                       </div>
                     </div>
                     <div class="tab-pane fade" id="list-enumerations">
-                      Aufzählungen
+                      <div class="row">
+                        <div class="col-md">
+                          Aufzählungen sind ähnlich der von Listen, man kann
+                          entweder nur den &lt;li&gt; Tag verwenden, oder man
+                          verwendet noch die &lt;ol/ul&gt;. Wenn man
+                          &lt;ol&gt; verwendet, gibt es eine Nummerierung.
+                        </div>
+                        <div class="col-md">
+                          <div class="code-block">
+                            &lt;li&gt;Punkt 1&lt;/li&gt;<br />
+                            &lt;li&gt;Punkt 2&lt;/li&gt;<br />
+                            &lt;li&gt;Punkt 3&lt;/li&gt;<br />
+                            &lt;li&gt;Punkt 4&lt;/li&gt;<br />
+                          </div>
+                          <li>Punkt 1</li>
+                          <li>Punkt 2</li>
+                          <li>Punkt 3</li>
+                          <li>Punkt 4</li>
+                        </div>
+
+                        <div class="col-md">
+                          <div class="code-block">
+                            &lt;ol&gt;<br />
+                            &nbsp;&lt;li&gt;Punkt 1&lt;/li&gt;<br />
+                            &nbsp;&lt;li&gt;Punkt 2&lt;/li&gt;<br />
+                            &nbsp;&lt;li&gt;Punkt 3&lt;/li&gt;<br />
+                            &nbsp;&lt;li&gt;Punkt 4&lt;/li&gt;<br />
+                            &lt;/ol&gt;
+                          </div>
+                          <ol>
+                            <li>Punkt 1</li>
+                            <li>Punkt 2</li>
+                            <li>Punkt 3</li>
+                            <li>Punkt 4</li>
+                          </ol>
+                        </div>
+                      </div>
                     </div>
                     <!-- bilder anfang -->
                     <div class="tab-pane fade" id="list-images">
@@ -270,10 +306,9 @@
           </div>
           <!-- ende Card standart tags -->
         </div>
-
       </div>
-    </div><!-- ende Grunwissencard -->
-
+    </div>
+    <!-- ende Grunwissencard -->
   </div>
   <div class="row spacer">
     <div class="col-md">
@@ -282,33 +317,103 @@
           Erweitertes Grundwissen (Frameworks, CSS)
         </div>
         <div class="card-body">
-            <div class="row">
-                <div class="col-4">
-                  <div class="list-group" id="list-tab" role="tablist">
-                    <a class="list-group-item list-group-item-action active" id="list-CSS-list" data-toggle="list" href="#list-CSS" >CSS</a>
-                    <a class="list-group-item list-group-item-action" id="list-Boostrap-list" data-toggle="list" href="#list-bootstrap" >Bootstrap</a>
-                    <a class="list-group-item list-group-item-action" id="list-jquery-list" data-toggle="list" href="#list-jquery">JQuery</a>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="list-group" id="list-tab" role="tablist">
+                <a class="list-group-item list-group-item-action active" id="list-CSS-list" data-toggle="list"
+                  href="#list-CSS">CSS</a>
+                <a class="list-group-item list-group-item-action" id="list-bootstrap-list" data-toggle="list"
+                  href="#list-bootstrap">Bootstrap</a>
+                <a class="list-group-item list-group-item-action" id="list-jquery-list" data-toggle="list"
+                  href="#list-jquery">JQuery</a>
+              </div>
+            </div>
+            <div class="col-md-8">
+              <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="list-CSS">
+                  <div class="row">
+                    <div class="col-md">
+                      CSS ist die Sprache, die für das Design einer HTML Datei
+                      zuständig ist. Die Syntax ist ähnlich wie bei HTML
+                      Simple, aber man muss sich gewisse Selektoren Auswendig
+                      merken. Damit der Computer weiß, was er wie
+                      Zeichnen(painten/rendern) soll, muss man definieren was
+                      nun z.B. das attribut
+                      <span class="attribut">"background-color"</span>
+                      bekommt. Dabei kann man sogenannte Selektoren verwenden.
+                      Diese Selektoren bestimmen, ob z.B. eine ID, eine Klasse
+                      oder ein bestimmter Tag angesprochen werden soll. Man
+                      schreibt den Selektor und auf diesen folgen dann 2
+                      geschweifte Klammern. In diesen Klammern wird dann jeder
+                      befehl eingegeben.<br />
+                      <div class="code-block">
+                        .table{ background-color:black; }
+                      </div>
+                    </div>
+                    <div class="col-md">
+                      <table class="table table-dark fluid">
+                        <thead>
+                          <th>Selektor</th>
+                          <th>Beschreibung</th>
+                          <th>Beispiel</th>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>#</td>
+                            <td>Der Selektor spricht alle IDs an</td>
+                            <td>#tabelle1</td>
+                          </tr>
+                          <tr>
+                            <td>.</td>
+                            <td>Der Selektor spricht alle Klassen an</td>
+                            <td>.table</td>
+                          </tr>
+                          <tr>
+                            <td>*TAG*</td>
+                            <td>
+                              Der Selektor spricht den jeweiligen Tag an
+                            </td>
+                            <td>body</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
                   </div>
                 </div>
-                <div class="col-8">
-                  <div class="tab-content" id="nav-tabContent">
-                      <div class="tab-pane fade show active" id="list-CSS">.Dd..</div>
-                    <div class="tab-pane fade show" id="list-bootstrap">.D..</div>
-                    <div class="tab-pane fade" id="list-jquery" >...</div>
-                  </div>
+                <div class="tab-pane fade" id="list-bootstrap">
+                  Bootstrap ist ein CSS Framework, welches viele Klassen
+                  besitzt, um ein responsive Layout generieren zu können.
+                  Bootstrap erfordert nur geringe CSS/HTML Kenntnisse, jedoch
+                  muss man dessen Klassen auswendig können bzw. muss man diese
+                  nachschlagen können, um mit Bootstrap zu arbeiten. Bootstrap
+                  bindet man wie jede andere CSS Datei ein, d.h. man schreibt
+                  ein link vom typ Stylesheet in den Header. Den Link zur
+                  Bootstrap minified Version bekommt man wenn man Bootstrap
+                  CDN googlet. Boostrap benötigt auch das Javascript Framework
+                  JQuery.
+                </div>
+                <div class="tab-pane fade" id="list-jquery">
+                  JQuery ist ein Framework, welches Javascript und HTMl
+                  verbindet. Dabei verwendet JQuery die CSS Selektoren. JQuery
+                  ist auch in der Lage, AJAX request abzusenden, welches die
+                  Userexperience deutlich steigert. Zusammengefasst, macht
+                  JQuery das Arbeiten mit Javascript in verbindung mit HTMl
+                  einfacher.
                 </div>
               </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </body>
 <footer>
-    <div class="col-md-5 col-centered text-center">
-      Aufgrund der komplexität und der Interaktiviät der Algorithmen wurden
-      Frameworks verwendet. Z.b. wird JQuery zum Eventlistener. Bootstrap wurde
-      fürs Design verwendet.
-    </div>
-  </footer>
+  <div class="col-md-5 col-centered text-center">
+    Aufgrund der komplexität und der Interaktiviät der Algorithmen wurden
+    Frameworks verwendet. Z.b. wird JQuery zum Eventlistener. Bootstrap wurde
+    fürs Design verwendet.
+  </div>
+</footer>
 
 </html>

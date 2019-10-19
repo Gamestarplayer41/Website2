@@ -1,247 +1,200 @@
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Webseite von Luca Schm. und Daniel St.</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="stylesheet"
-    href="design.css"
-    />
-  </head>
-  <body>
-    <!-- Navbar -->
-    <div class="navigations-bar">
-      <nav class="navbar navbar-expand-md bg-dark navbar-dark">
-        <a class="navbar-brand" style="color:white"
-          >Webseite von Daniel St. und Luca Schm.</a
-        >
 
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#collapsibleNavbar"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Webseite von Luca Schm. und Daniel St.</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="design.css" />
+</head>
 
-        <div class="collapse navbar-collapse" id="collapsibleNavbar">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Startseite</a>
-            </li>
-            <li class="navbar-item">
-                <a class="nav-link" href="Startseite.html">Startseite in schön</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="Verschlüsselung.html"
-                >Verschlüsselung</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link">Videoschnitt</a>
-            </li>
-          </ul>
+<body>
+  <!-- Navbar -->
+  <div class="navigations-bar">
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+      <a class="navbar-brand" style="color:white">Webseite von Daniel St. und Luca Schm.</a>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Startseite</a>
+          </li>
+          <li class="navbar-item">
+            <a class="nav-link" href="Startseite.html">Startseite in schön</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Verschlüsselung.html">Verschlüsselung</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link">Videoschnitt</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <!-- navbar ende -->
+  <!-- Cäsar neu -->
+  <div class="row spacer">
+    <div class="col-md col-sm">
+      <div class="card">
+        <div class="card-header">
+          Cäsar
         </div>
-      </nav>
-    </div>
-<!-- navbar ende -->
-    <!-- Cäsar neu -->
-    <div class="row spacer">
-      <div class="col-md col-sm">
-        <div class="card">
-          <div class="card-header">
-            Cäsar
-          </div>
-          <div class="card-body">
-            <div class="row">
-              <div class="col-md col-sm">
-                Das Cäsar verfahren arbeitet auf grundlage des einfachen
-                verschiebens des Alphabetes. Aufgrund von nur 25 möglichen
-                Kombinationen ist dies verfahren heutzutage in Millisekunden
-                geknackt. Unten ist eine Demo des Cäsar verfahrens. Diese
-                verschiebt das Alphabet um 7 stellen.
-              </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md col-sm">
+              Das Cäsar verfahren arbeitet auf grundlage des einfachen
+              verschiebens des Alphabetes. Aufgrund von nur 25 möglichen
+              Kombinationen ist dies verfahren heutzutage in Millisekunden
+              geknackt. Unten ist eine Demo des Cäsar verfahrens. Diese
+              verschiebt das Alphabet um 7 stellen.
             </div>
-            <div class="row">
-              <div class="col-md col-sm-3 py-2">
-                <input
-                  class="form-control"
-                  placeholder="Input"
-                  id="inputCäsar"
-                />
-              </div>
-              <div class="col-md col-sm-3 py-2">
-                <input
-                  class="form-control"
-                  type="text"
-                  placeholder="OUTPUT"
-                  id="outputCäsar"
-                  readonly
-                />
-              </div>
-              <div class="col-md-2 col-sm-2 py-2">
-                <button
-                  type="button"
-                  class="btn btn-primary px-3 "
-                  id="CäsarCodieren"
-                >
-                  Codieren
-                </button>
-              </div>
-              <div class="col-md col-sm-6 ">
-                Das Cäsar verfahren arbeitet auf grundlage des einfachen
-                verschiebens des Alphabetes. Aufgrund von nur 25 möglichen
-                Kombinationen ist dies verfahren heutzutage in Milliesekunden
-                geknackt. Unten ist eine Demo des Cäsar verfahrens. Diese
-                verschiebt das Alphabet um 7 stellen.
-              </div>
+          </div>
+          <div class="row">
+            <div class="col-md col-sm-3 py-2">
+              <input class="form-control" placeholder="Input" id="inputCäsar" />
+            </div>
+            <div class="col-md col-sm-3 py-2">
+              <input class="form-control" type="text" placeholder="OUTPUT" id="outputCäsar" readonly />
+            </div>
+            <div class="col-md-2 col-sm-2 py-2">
+              <button type="button" class="btn btn-primary px-3 " id="CäsarCodieren">
+                Codieren
+              </button>
+            </div>
+            <div class="col-md col-sm-6 ">
+              Das Cäsar verfahren arbeitet auf grundlage des einfachen
+              verschiebens des Alphabetes. Aufgrund von nur 25 möglichen
+              Kombinationen ist dies verfahren heutzutage in Milliesekunden
+              geknackt. Unten ist eine Demo des Cäsar verfahrens. Diese
+              verschiebt das Alphabet um 7 stellen.
             </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- Cäsar ENDE -->
-    <!-- Vigenere -->
-    <div class="row spacer">
-      <div class="col-md col-sm">
-        <div class="card">
-          <div class="card-header">
-            Viginere
-          </div>
-          <div class="card-body">
-            <div class="row">
-              <!-- Text incl.DEMO -->
-              <div class="col-xl">
-                Das Viginere System ist komplizierter als das Cäsar verfahren,
-                jedoch nicht unknackbar. Beim Viginere verfahren wird ein
-                Schlüssel benötigt. Dieser Schlüssel wird zum Codieren sowie dem
-                Decodieren verwendet.<br />
-                Jedem Buchstaben wird ein Buchstabe des Schlüssels zugewiesen.
-                Falls der Schlüssel kleiner ist als der Geheimtext wird der
-                Schlüssel soweit wiederholt, bis alle Buchstaben des Textes
-                einen Buchstaben des Schlüssels zugewiesen bekommen haben.
-                Bsp:<br />
-                <b>
-                  GEHEIMTEXT<br />
-                  TEXTTEXTTEX<br />
-                </b>
-                Wie man auf dem Bild schon erkennen kann, ist es Praktisch eine
-                Übersetzungstabelle. Man wählt nun den Buchstaben G aus markiert
-                sich dann die Spalte des G´s. Danach nimmt man sich das T vor
-                und markiert sich die Zeile des T´s. Der Buchstabe am
-                Kreuzungspunkt ist nun der neue Buchstabe. Dies führt man für
-                jeden Buchstaben des zu verschlüsselnen Textes durch und hat
-                dann die Verschlüsselte Nachricht.<br />
-                In der Demo werden spaces herausgefiltert und im falle des
-                Inputs wieder eingesetzt. Spaces im Key werden missachtet. Beide
-                Strings werden zu Uppercase convertiert, da sonst der
-                Algorithmus seine einfachkeit verliert (Schau zwecke).<br />
-                (Randinfo: Das Beispiel von Uwe Debacher ist fehlerhaft und
-                filtert keine leerzeichen)
-                <div class="row">
-                  <div class="col-md">
-                    <input
-                      class="form-control"
-                      id="viginereInput"
-                      placeholder="Input"
-                    />
-                  </div>
-                  <div class="col-md">
-                    <input
-                      class="form-control"
-                      id="viginereKey"
-                      placeholder="Key"
-                    />
-                  </div>
-                  <div class="col-md ">
-                    <input
-                      class="form-control"
-                      id="viginereOutput"
-                      placeholder="Output"
-                      disabled="disabled"
-                    />
-                  </div>
-                  <div class="col-md">
-                    <div class="row">
-                      <div class="col-md">
-                        <button class="btn btn-primary" id="viginereCodieren">
-                          Codieren
-                        </button>
-                      </div>
-                      <div class="col-md ">
-                        <button
-                          class="btn btn-primary "
-                          id="viginereDecodieren"
-                        >
-                          Decodieren
-                        </button>
-                      </div>
-                      <div class="col-md">
-                        <button class="btn btn-primary" id="viginereSwap">
-                          Swappen
-                        </button>
-                      </div>
+  </div>
+  <!-- Cäsar ENDE -->
+  <!-- Vigenere -->
+  <div class="row spacer">
+    <div class="col-md col-sm">
+      <div class="card">
+        <div class="card-header">
+          Viginere
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <!-- Text incl.DEMO -->
+            <div class="col-xl">
+              Das Viginere System ist komplizierter als das Cäsar verfahren,
+              jedoch nicht unknackbar. Beim Viginere verfahren wird ein
+              Schlüssel benötigt. Dieser Schlüssel wird zum Codieren sowie dem
+              Decodieren verwendet.<br />
+              Jedem Buchstaben wird ein Buchstabe des Schlüssels zugewiesen.
+              Falls der Schlüssel kleiner ist als der Geheimtext wird der
+              Schlüssel soweit wiederholt, bis alle Buchstaben des Textes
+              einen Buchstaben des Schlüssels zugewiesen bekommen haben.
+              Bsp:<br />
+              <b>
+                GEHEIMTEXT<br />
+                TEXTTEXTTEX<br />
+              </b>
+              Wie man auf dem Bild schon erkennen kann, ist es Praktisch eine
+              Übersetzungstabelle. Man wählt nun den Buchstaben G aus markiert
+              sich dann die Spalte des G´s. Danach nimmt man sich das T vor
+              und markiert sich die Zeile des T´s. Der Buchstabe am
+              Kreuzungspunkt ist nun der neue Buchstabe. Dies führt man für
+              jeden Buchstaben des zu verschlüsselnen Textes durch und hat
+              dann die Verschlüsselte Nachricht.<br />
+              In der Demo werden spaces herausgefiltert und im falle des
+              Inputs wieder eingesetzt. Spaces im Key werden missachtet. Beide
+              Strings werden zu Uppercase convertiert, da sonst der
+              Algorithmus seine einfachkeit verliert (Schau zwecke).<br />
+              (Randinfo: Das Beispiel von Uwe Debacher ist fehlerhaft und
+              filtert keine Leerzeichen, was zur verkomplizierung führt.)
+              <div class="row">
+                <div class="col-md">
+                  <input class="form-control" id="viginereInput" placeholder="Input" />
+                </div>
+                <div class="col-md">
+                  <input class="form-control" id="viginereKey" placeholder="Key" />
+                </div>
+                <div class="col-md ">
+                  <input class="form-control" id="viginereOutput" placeholder="Output" disabled="disabled" />
+                </div>
+                <div class="col-md">
+                  <div class="row">
+                    <div class="col-md">
+                      <button class="btn btn-primary" id="viginereCodieren">
+                        Codieren
+                      </button>
+                    </div>
+                    <div class="col-md ">
+                      <button class="btn btn-primary " id="viginereDecodieren">
+                        Decodieren
+                      </button>
+                    </div>
+                    <div class="col-md">
+                      <button class="btn btn-primary" id="viginereSwap">
+                        Swappen
+                      </button>
                     </div>
                   </div>
                 </div>
               </div>
-              <!-- Text incl. demo ende -->
-              <!-- img -->
-              <div class="col-xl-3 text-center">
-                <img
-                  src="img/VigenereAutokey1.jpg"
-                  class="img-fluid rounded"
-                  style="margin-left:auto;margin-right:auto;"
-                />
-              </div>
-              <!-- img ende -->
             </div>
+            <!-- Text incl. demo ende -->
+            <!-- img -->
+            <div class="col-xl-3 text-center">
+              <img src="img/VigenereAutokey1.jpg" class="img-fluid rounded"
+                style="margin-left:auto;margin-right:auto;" />
+            </div>
+            <!-- img ende -->
           </div>
-          <div class="card-footer">
-            Teilweise aus Uwe Debachers Dokument entnommen, auch wenn der
-            Algorithmus fehlerhaft ist.
-          </div>
+        </div>
+        <div class="card-footer">
+          Teilweise aus Uwe Debachers Dokument entnommen, auch wenn der
+          Algorithmus fehlerhaft ist.
         </div>
       </div>
     </div>
-    <!-- Vigenere ENDE -->
-    <div class="row spacer">
-      <div class="col-md col-sm">
-        <div class="card">
-          <div class="card-header">
-            RSA-Algorithmus
-          </div>
-          <div class="card-body"></div>
-          <div class="card-footer">
-            QUELLEN:
-          </div>
+  </div>
+  <!-- Vigenere ENDE -->
+  <div class="row spacer">
+    <div class="col-md col-sm">
+      <div class="card">
+        <div class="card-header">
+          RSA-Algorithmus
+        </div>
+        <div class="card-body"></div>
+        <div class="card-footer">
+          QUELLEN:
         </div>
       </div>
     </div>
-  </body>
-  <footer>
-    <div class="col-md-5 col-centered text-center">
-      Aufgrund der komplexität und der Interaktiviät der Algorithmen wurden
-      Frameworks verwendet. Z.b. wird JQuery zum Eventlistener. Bootstrap wurde
-      fürs Design verwendet.
-    </div>
-  </footer>
+  </div>
+</body>
+<footer>
+  <div class="col-md-5 col-centered text-center">
+    Aufgrund der komplexität und der Interaktiviät der Algorithmen wurden
+    Frameworks verwendet. Z.b. wird JQuery zum Eventlistener. Bootstrap wurde
+    fürs Design verwendet.
+  </div>
+</footer>
+
 </html>
 
 <script type="text/javascript">
-  $("#CäsarCodieren").on("click", function() {
+  $("#CäsarCodieren").on("click", function () {
     var Input = $("#inputCäsar").val();
     var Output = "";
     for (var i in Input) {
@@ -265,11 +218,11 @@
     $("#outputCäsar").val(Output);
   });
 
-  $("#viginereCodieren").on("click", function() {
+  $("#viginereCodieren").on("click", function () {
     viginereCodieren();
   });
 
-  $("#viginereDecodieren").on("click", function() {
+  $("#viginereDecodieren").on("click", function () {
     viginereDecodieren();
   });
 
@@ -370,4 +323,12 @@
     }
     $("#viginereOutput").val(output);
   }
+
+  $('#viginereSwap').on('click', function () {
+    var Output = $('#viginereOutput').val();
+    console.log("hey");
+    var Input = $('#viginereInput').val();
+    $('#viginereOutput').val(Input);
+    $('#viginereInput').val(Output);
+  });
 </script>
