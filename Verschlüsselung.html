@@ -175,9 +175,26 @@
         <div class="card-header">
           RSA-Algorithmus
         </div>
-        <div class="card-body"></div>
+        <div class="card-body">
+          Der RSA Algorithmus ist ein Mathematisch komplexer Algorithmus. Mithilfe von Mathematischen Operationen wird
+          ein "public" und ein "private" Schlüssel erstellt. Dabei sind ist der "public" und der "private" Key abhängig,
+          da aus dem "public" Key der "private" Key generiert wird. Im folgenden sieht man die Schritte, die der
+          Algorithmus durch läuft:<br>
+          <div class="code-block">
+            <ol>
+              <li>2 Primzahlen wählen: p&q</li>
+              <li>N berechnen: p*q=N</li>
+              <li>&phi;(N)=(p-1)*(q-1) (Eulersche Funktion)</li>
+              <li>Teilerfremde Zahl zu &phi;(N) finden. Bedingung: 1&lt;e&lt;&phi;(N)</li>
+              <li>e*d mod(&phi;(N))=1 (d wird gesucht)</li>
+            </ol>
+          </div>
+          Private Key:(N;d)<br>
+          Public Key: (N;e)<br>
+        </div>
         <div class="card-footer">
-          QUELLEN:
+          https://de.wikipedia.org/wiki/RSA-Kryptosystem + Student
+          <button id="RSA">HEY</button>
         </div>
       </div>
     </div>
@@ -193,8 +210,11 @@
 </footer>
 
 </html>
-
+<script src="scripts/RSA.js"></script>
 <script type="text/javascript">
+  $('#RSA').on("click", function () {
+    KeyGen();
+  });
   $("#CäsarCodieren").on("click", function () {
     var Input = $("#inputCäsar").val();
     var Output = "";
