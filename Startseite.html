@@ -274,9 +274,7 @@
                           Attribut
                           <span class="attribut">"src"</span> angeben. Beim
                           "source" attribut gibt man den Pfad zur Datei an.
-                          Dabei kann man Relative und Absolute Pfade nehmen
-                          (klick mich
-                          <!-- Später -->). Beim Bild gibt es noch die
+                          Dabei kann man Relative und Absolute Pfade nehmen. Beim Bild gibt es noch die
                           <span class="attribut">"alt</span>,
                           <span class="attribut">"heigth"</span>,
                           <span class="attribut">"width"</span> Attribute. Wie
@@ -305,6 +303,44 @@
             </div>
           </div>
           <!-- ende Card standart tags -->
+          <div class="row">
+            <div class="col-md">
+              <div class="card spaceTopCard">
+                <div class="card-header">
+                  Pfade
+                </div>
+                <div class="card-body">
+                  Pfade sind in jedem Computer Technischen Bereich Wichtig. Man unterscheidet zwischen Relativen und
+                  Absoluten Pfaden. Heutzutage werden meist Relative Pfade verwendet. Vorallem in Dynamischen
+                  Systemen
+                  macht dies Sinn.<br>
+                  Absolute Pfade sind Pfade, die vom Stammverzeichnis der Festplatte ausgehen. Ein Pfad sieht z.B. so
+                  aus:<br>
+                  <div class="code-block">
+                    "C:\Windows\System32"<br>
+                  </div>
+                  Das C steht für den Festplatten Basis Name, das Betriebssystem ist generell immer auf der C Festplatte
+                  gespeichert.<br>
+                  Nach dem Festplatten Buchstaben, kommen die einzelnen Ordner/Dateien. Im Beispiel Landen wir im Ordner
+                  System32 welcher im Ordner Windows angesiedelt ist.<br><br>
+                  Relative Pfade, sind Dynamischer und somit besser für Programme/Projekte geeignet. Wie der Name es
+                  vermuten lässt, wird der Pfad von der Datei (die diesen Aufruft) aus gestaltet. D.h. wenn man einen
+                  Ordner auf dem Desktop hat Namens "Projekt" und in diesem eine HTML und eine CSS Datei vorhanden ist,
+                  dann kann in der HTML einen Relativen Pfad angeben. Das sähe dann so aus:<br>
+                  <div class="code-block">
+                    "design.css"<br>
+                  </div>
+                  Wenn man nun einen Absoluten Pfad angegeben hätte, hätte man einen Pfad wie diesen:<br>
+                  <div class="code-block">
+                    "C:\Users\%USER%\Desktop\Projekt\design.css"<br>
+                  </div>
+                  Wenn der Ordner jetzt z.B. auf ein Linux Computer/Server kopiert werden würde, würde das Verzeichnis
+                  nicht mehr funktionieren, da Linux andere Ordner besitzt usw. Auch wenn man den Ordner nur Verschieben
+                  würde, z.B. in den Ordner "Dokumente", würde er die CSS Datei nicht mehr finden.
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
