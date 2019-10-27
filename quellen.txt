@@ -2,7 +2,12 @@ https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjN2Y
 https://www.instagram.com/p/B3i4luEg3Wa/?igshid=f5be3zjse9ti
 https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjWmeiTnojlAhXyMewKHc1YDb8QjRx6BAgBEAQ&url=%2Furl%3Fsa%3Di%26source%3Dimages%26cd%3D%26ved%3D%26url%3Dhttps%253A%252F%252Fwww.cs.uri.edu%252Fcryptography%252Fclassicalvigenere.htm%26psig%3DAOvVaw0W1YgDQn1OAHS2pBgbYnPT%26ust%3D1570471294036350&psig=AOvVaw0W1YgDQn1OAHS2pBgbYnPT&ust=1570471294036350
 
-Videschnitt:
-https://icon-library.net/icon/sony-vegas-icon-28.html
-https://www.uplabs.com/posts/final-cut-pro-mac-icon
-https://de.wikipedia.org/wiki/Datei:Adobe_Premiere_Pro_CC_icon.svg
+Videschnitt.html:
+[Bilder]
+hitfilm.png: https://s3.amazonaws.com/fxhome-static/images/product/hitfilm-express/512.png
+davinci.png: https://images.fmctraining.com/images/davinci-logo.png
+shotcut.png: https://www.shotcut.org/assets/img/media/shotcut-logo-512x512.png
+imovie.png: https://is4-ssl.mzstatic.com/image/thumb/Purple113/v4/77/0c/cd/770ccd82-df1b-e2f7-7e65-65321e48a3e6/iMovie.png/1200x630bb.png
+premiere.png: https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Adobe_Premiere_Pro_CC_icon.svg/2000px-Adobe_Premiere_Pro_CC_icon.svg.png
+finalcut.png: https://support.apple.com/content/dam/edam/applecare/images/en_US/proapps/content-link-final-cut-pro_2x.png
+sonyvegas.png: https://icon-library.net/images/sony-vegas-icon/sony-vegas-icon-28.jpg
