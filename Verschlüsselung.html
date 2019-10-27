@@ -122,29 +122,29 @@
               (Randinfo: Das Beispiel von Uwe Debacher ist fehlerhaft und
               filtert keine Leerzeichen, was zur verkomplizierung führt.)
               <div class="row">
-                <div class="col-md">
+                <div class="col-md mt-2">
                   <input class="form-control" id="viginereInput" placeholder="Input" />
                 </div>
-                <div class="col-md">
+                <div class="col-md mt-2">
                   <input class="form-control" id="viginereKey" placeholder="Key" />
                 </div>
-                <div class="col-md ">
+                <div class="col-md mt-2">
                   <input class="form-control" id="viginereOutput" placeholder="Output" disabled="disabled" />
                 </div>
                 <div class="col-md">
                   <div class="row">
-                    <div class="col-md">
-                      <button class="btn btn-primary" id="viginereCodieren">
+                    <div class="col-md mt-2 text-center">
+                      <button class="btn btn-primary" style="width:120px;" id="viginereCodieren">
                         Codieren
                       </button>
                     </div>
-                    <div class="col-md ">
-                      <button class="btn btn-primary " id="viginereDecodieren">
+                    <div class="col-md mt-2 text-center">
+                      <button class="btn btn-primary" style="width:120px;" id="viginereDecodieren">
                         Decodieren
                       </button>
                     </div>
-                    <div class="col-md">
-                      <button class="btn btn-primary" id="viginereSwap">
+                    <div class="col-md mt-2 text-center">
+                      <button class="btn btn-primary" style="width:120px;" id="viginereSwap">
                         Swappen
                       </button>
                     </div>
@@ -162,8 +162,8 @@
           </div>
         </div>
         <div class="card-footer">
-          Teilweise aus Uwe Debachers Dokument entnommen, auch wenn der
-          Algorithmus fehlerhaft ist.
+          Grundidee aus Uwe Debachers Dokument entnommen, auch wenn der
+          Algorithmus fehlerhaft ist (Algorithmus selber angepasst)
         </div>
       </div>
     </div>
@@ -193,8 +193,83 @@
           Public Key: (N;e)<br>
         </div>
         <div class="card-footer">
-          https://de.wikipedia.org/wiki/RSA-Kryptosystem + Student
+          <a href="https://de.wikipedia.org/wiki/RSA-Kryptosystem">Wikipedia</a> + Student
           <button id="RSA">HEY</button>
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#RSAModal">
+            Launch demo modal
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<body>
+  <div class="modal fade" id="RSAModal">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4>RSA-Algorithmus</h4>
+          <button type="button" class="close" data-dismiss="modal">
+            <span>&times;</span>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-2">
+              <label for="componentp">p:</label>
+              <input class="form-control" id="componentp" readonly />
+            </div>
+            <div class="col-md-2">
+              <label for="componentq">q:</label>
+              <input class="form-control" id="componentq" readonly />
+            </div>
+            <div class="col-md-2">
+              <label for="componentN">N:</label>
+              <input class="form-control" id="componentN" readonly />
+            </div>
+            <div class="col-md-2">
+              <label for="componentphiN">&phi;(N):</label>
+              <input class="form-control" id="componentphiN" readonly />
+            </div>
+            <div class="col-md-2">
+              <label for="componente">e:</label>
+              <input class="form-control" id="componente" readonly />
+            </div>
+            <div class="col-md-2">
+              <label for="componente">d:</label>
+              <input class="form-control" id="componentd" readonly />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-2">
+              <label for="privateKey">Privater Schlüssel</label>
+              <input class="form-control" id="privateKey" readonly />
+            </div>
+            <div class="col-md-2">
+              <label for="publicKey">Öffentlicher Schlüssel</label>
+              <input class="form-control" id="publicKey" readonly />
+            </div>
+            <div class="col-md">
+              <label for="generateRSA">&nbsp;</label>
+              <button class="btn btn-primary btn-block" id="generateRSA">Generieren</button>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md">
+              <label for="text">Text:</label>
+              <textarea id="text" class="form-control" rows="3"></textarea>
+            </div>
+            <div class="col-md">
+              <label for="encrypted">Verschlüsselt:</label>
+              <textarea id="encrypted" class="form-control" rows="3"></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <div class="custom-control custom-switch">
+            <input type="checkbox" class="custom-control-input" id="liveEncryption">
+            <label class="custom-control-label" for="liveEncryption">Live Encryption</label>
+          </div>
+          <button class="btn btn-primary" data-dismiss="modal">Schließen</button>
         </div>
       </div>
     </div>
@@ -208,9 +283,8 @@
     fürs Design verwendet.
   </div>
 </footer>
-
 </html>
-<script src="scripts/RSA.js"></script>
+
 <script type="text/javascript">
   $('#RSA').on("click", function () {
     KeyGen();
@@ -297,6 +371,7 @@
   }
 
   function viginereCodieren() {
+    console.log(2);
     var input = $("#viginereInput").val();
     var key = $("#viginereKey").val();
     var output = "";
@@ -353,3 +428,4 @@
     $('#viginereInput').val(Output);
   });
 </script>
+<script src="scripts/RSA.js"></script>

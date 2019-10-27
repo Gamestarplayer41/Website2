@@ -79,7 +79,7 @@ function RSAAlgo() {
      console.log(phiN);
      console.log(e);
      console.log(d); */
-    if (p != undefined && q != undefined && n != undefined && phiN != undefined && e != undefined && d != undefined) {
+    if (p != undefined && q != undefined && n != undefined && phiN != undefined && e != undefined && d != undefined && p!=q) {
         return [p, q, n, phiN, e, d];
     } else {
         return [0, 0, 0, 0, 0, -1];
