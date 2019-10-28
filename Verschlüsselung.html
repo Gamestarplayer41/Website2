@@ -188,20 +188,33 @@
               <li>Teilerfremde Zahl zu &phi;(N) finden. Bedingung: 1&lt;e&lt;&phi;(N)</li>
               <li>e*d mod(&phi;(N))=1 (d wird gesucht)</li>
             </ol>
-          </div>
+          </div><br>
           Private Key:(N;d)<br>
-          Public Key: (N;e)<br>
+          Public Key: (N;e)<br><br>
+          Verschlüsselt wird durch (m= Nachricht,c=Verschlüsselt)<br>
+          <div class="code-block">
+            c = m<sup>e</sup> mod(N)
+          </div>
+          Entschlüsselt wird mit<br>
+          <div class="code-block">
+            m = c<sup>d</sup> mod(N)
+          </div><br>
+          Anmerkung: Aufgrund von einem datatype Overflows und fehlender Präzision der Verwendeten Datentypen wurde eine
+          Funktion zum verschlüsseln verwendet, die höhere Mathematik verwendet um die Zahlen kleiner zu halten.
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#RSAModal">
+              Launch demo modal
+            </button>
         </div>
+        
         <div class="card-footer">
           <a href="https://de.wikipedia.org/wiki/RSA-Kryptosystem">Wikipedia</a> + Student
-          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#RSAModal">
-            Launch demo modal
-          </button>
+         
         </div>
       </div>
     </div>
   </div>
 </body>
+
 <body>
   <div class="modal fade" id="RSAModal">
     <div class="modal-dialog modal-xl">
@@ -223,7 +236,7 @@
             </div>
             <div class="col-md-2">
               <label for="componentN">N:</label>
-              <input class="form-control" id="componentN" readonly />
+              <input class="form-control" id="componentN" />
             </div>
             <div class="col-md-2">
               <label for="componentphiN">&phi;(N):</label>
@@ -231,11 +244,11 @@
             </div>
             <div class="col-md-2">
               <label for="componente">e:</label>
-              <input class="form-control" id="componente" readonly />
+              <input class="form-control" id="componente" />
             </div>
             <div class="col-md-2">
               <label for="componente">d:</label>
-              <input class="form-control" id="componentd" readonly />
+              <input class="form-control" id="componentd" />
             </div>
           </div>
           <div class="row">
@@ -282,13 +295,15 @@
     fürs Design verwendet.
   </div>
 </footer>
+
 </html>
 
 <script type="text/javascript">
   $('#generateRSA').on("click", function () {
     KeyGen();
+    encrypt();
   });
-  $('#text').on('input',function(){
+  $('#text').on('input', function () {
     encrypt();
   });
   $("#CäsarCodieren").on("click", function () {
