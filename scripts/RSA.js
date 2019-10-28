@@ -46,7 +46,7 @@ function calcD(e, phiN) {
     while (true) {
         d = (1 + k * phiN) / e;
         if (d == parseInt(d)) {
-
+            console.log(k);
             break;
 
         } else if (k > 10000) {
@@ -63,7 +63,6 @@ function pick2Numbers(max) {
 }
 
 function RSAAlgo() {
-    startAgain:
     var primeArray = primzahl(100);
     var randomNum = pick2Numbers(primeArray.length);
     var p = primeArray[randomNum[0]];
@@ -79,7 +78,7 @@ function RSAAlgo() {
      console.log(phiN);
      console.log(e);
      console.log(d); */
-    if (p != undefined && q != undefined && n != undefined && phiN != undefined && e != undefined && d != undefined && p!=q) {
+    if (p != undefined && q != undefined && n != undefined && phiN != undefined && e != undefined && d != undefined && p != q) {
         return [p, q, n, phiN, e, d];
     } else {
         return [0, 0, 0, 0, 0, -1];
@@ -94,5 +93,27 @@ function KeyGen() {
             break;
         }
     }
-    console.log(values);
+    $('#componentp').val(values[0]);
+    $('#componentq').val(values[1]);
+    $('#componentN').val(values[2]);
+    $('#componentphiN').val(values[3]);
+    $('#componente').val(values[4]);
+    $('#componentd').val(values[5]);
+    $('#privateKey').val("(" + values[2] + ";" + values[5] + ")");
+    $('#publicKey').val("(" + values[2] + ";" + values[4] + ")");
+    //$('#values').val({p:values[0],q:values[1],N:values[2],phiN:values[3],e:values[4],d:values[5]});
+}
+
+function encrypt() {
+    var N = $('#componentN').val();
+    var e = $('#componente').val();
+    var text = $('#text').val();
+    var Output = "";
+    for (var i in text) {
+        var KeyCode = text.charCodeAt(i);
+
+        KeyCode = Math.pow(KeyCode, e) % N;
+        Output += KeyCode;
+    }
+    $('#encrypted').val(Output);
 }
