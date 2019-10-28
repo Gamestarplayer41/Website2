@@ -194,7 +194,6 @@
         </div>
         <div class="card-footer">
           <a href="https://de.wikipedia.org/wiki/RSA-Kryptosystem">Wikipedia</a> + Student
-          <button id="RSA">HEY</button>
           <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#RSAModal">
             Launch demo modal
           </button>
@@ -286,8 +285,11 @@
 </html>
 
 <script type="text/javascript">
-  $('#RSA').on("click", function () {
+  $('#generateRSA').on("click", function () {
     KeyGen();
+  });
+  $('#text').on('input',function(){
+    encrypt();
   });
   $("#CäsarCodieren").on("click", function () {
     var Input = $("#inputCäsar").val();
