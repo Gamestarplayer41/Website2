@@ -105,31 +105,25 @@ function KeyGen() {
 }
 
 function encrypt() {
-    if($('#text').val()){
-    var N = $('#componentN').val();
-    N = parseInt(N);
-    var e = $('#componente').val();
-    e = parseInt(e);
-    var text = $('#text').val();
-    var Output = "";
-    for (var i in text) {
-        var KeyCode = text.charCodeAt(i);
+    if ($('#text').val()) {
+        var N = $('#componentN').val();
+        N = parseInt(N);
+        var e = $('#componente').val();
+        e = parseInt(e);
+        var text = $('#text').val();
+        var Output = "";
+        for (var i in text) {
+            var KeyCode = text.charCodeAt(i);
 
-        KeyCode = powFun(KeyCode,e,N)
-        Output += KeyCode;
-        Output+=" ";
+            KeyCode = powFun(KeyCode, e, N)
+            Output += KeyCode;
+            Output += " ";
+        }
+        $('#encrypted').val(Output);
     }
-    $('#encrypted').val(Output);
-    
-
-
-
-  
-}
 }
 /* Encrypt function https://stackoverflow.com/questions/30630603/javascript-self-made-pow-with-modulo */
-function addmod(x, y, n)
-{
+function addmod(x, y, n) {
     // Precondition: x<n, y<n
     // If it will overflow, use alternative calculation
     if (x + y <= x) x = x - (n - y) % n;
@@ -137,8 +131,7 @@ function addmod(x, y, n)
     return x;
 }
 
-function sqrmod(a, n)
-{
+function sqrmod(a, n) {
     var b;
     var sum = 0;
 
@@ -157,11 +150,11 @@ function sqrmod(a, n)
 
 function powFun(base, ex, mo) {
     var r;
-    if(ex === 0) 
+    if (ex === 0)
         return 1;
-    else if(ex % 2 === 0) {
-        r = powFun(base, ex/2, mo) % mo ;
+    else if (ex % 2 === 0) {
+        r = powFun(base, ex / 2, mo) % mo;
         // return (r * r) % mo;
         return sqrmod(r, mo);
-    }else  return (base * powFun(base, ex - 1, mo)) % mo;
+    } else return (base * powFun(base, ex - 1, mo)) % mo;
 }
