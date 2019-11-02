@@ -1,294 +1,302 @@
-<html>
+<html lang="de">
 
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Verschlüsselung Daniel/Luca</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="design.css" />
+          integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+          crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="design.css"/>
 </head>
 
 <body>
-  <!-- Navbar -->
-  <div class="navigations-bar">
-    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
-      <a class="navbar-brand" style="color:white">Webseite von Daniel St. und Luca Schm.</a>
+<!-- Navbar -->
+<div class="navigations-bar">
+  <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+    <a class="navbar-brand" style="color:white">Webseite von Daniel St. und Luca Schm.</a>
 
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-      <div class="collapse navbar-collapse" id="collapsibleNavbar">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Startseite</a>
-          </li>
-          <li class="navbar-item">
-            <a class="nav-link" href="Startseite.html">Startseite in schön</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="Verschlüsselung.html">Verschlüsselung</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="Videoschnitt.html">Videoschnitt</a>
-          </li>
-        </ul>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Startseite</a>
+        </li>
+        <li class="navbar-item">
+          <a class="nav-link" href="Startseite.html">Startseite in schön</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Verschlüsselung.html">Verschlüsselung</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Videoschnitt.html">Videoschnitt</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+<!-- navbar ende -->
+<!-- Cäsar neu -->
+<div class="row spacer">
+  <div class="col-md col-sm">
+    <div class="card">
+      <div class="card-header">
+        Cäsar
       </div>
-    </nav>
-  </div>
-  <!-- navbar ende -->
-  <!-- Cäsar neu -->
-  <div class="row spacer">
-    <div class="col-md col-sm">
-      <div class="card">
-        <div class="card-header">
-          Cäsar
-        </div>
-        <div class="card-body">
-          <div class="row">
-            <div class="col-md col-sm">
-              Das Cäsar verfahren arbeitet auf grundlage des einfachen
-              verschiebens des Alphabetes. Aufgrund von nur 25 möglichen
-              Kombinationen ist dies verfahren heutzutage in Millisekunden
-              geknackt. Unten ist eine Demo des Cäsar verfahrens. Diese
-              verschiebt das Alphabet um 7 stellen.
-            </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md col-sm">
+            Das Cäsar verfahren arbeitet auf grundlage des einfachen
+            verschiebens des Alphabetes. Aufgrund von nur 25 möglichen
+            Kombinationen ist dies verfahren heutzutage in Millisekunden
+            geknackt. Unten ist eine Demo des Cäsar verfahrens. Diese
+            verschiebt das Alphabet um 7 stellen.
           </div>
-          <div class="row">
-            <div class="col-md col-sm-3 py-2">
-              <input class="form-control" placeholder="Input" id="inputCäsar" />
-            </div>
-            <div class="col-md col-sm-3 py-2">
-              <input class="form-control" type="text" placeholder="OUTPUT" id="outputCäsar" readonly />
-            </div>
-            <div class="col-md-2 col-sm-2 py-2">
-              <button type="button" class="btn btn-primary px-3 " id="CäsarCodieren">
-                Codieren
-              </button>
-            </div>
-            <div class="col-md col-sm-6 ">
-              Das Cäsar verfahren arbeitet auf grundlage des einfachen
-              verschiebens des Alphabetes. Aufgrund von nur 25 möglichen
-              Kombinationen ist dies verfahren heutzutage in Milliesekunden
-              geknackt. Unten ist eine Demo des Cäsar verfahrens. Diese
-              verschiebt das Alphabet um 7 stellen.
-            </div>
+        </div>
+        <div class="row">
+          <div class="col-md col-sm-3 py-2">
+            <label for="inputCäsar"></label><!--For Warning-->
+            <input class="form-control" placeholder="Input" id="inputCäsar"/>
+          </div>
+          <div class="col-md col-sm-3 py-2">
+            <label for="outputCäsar"></label><!--For Warning-->
+            <input class="form-control" type="text" placeholder="OUTPUT" id="outputCäsar" readonly/>
+          </div>
+          <div class="col-md-2 col-sm-2 py-2">
+            <button type="button" class="btn btn-primary px-3 " id="CäsarCodieren">
+              Codieren
+            </button>
+          </div>
+          <div class="col-md col-sm-6 ">
+            Das Cäsar verfahren arbeitet auf grundlage des einfachen
+            verschiebens des Alphabetes. Aufgrund von nur 25 möglichen
+            Kombinationen ist dies verfahren heutzutage in Milliesekunden
+            geknackt. Unten ist eine Demo des Cäsar verfahrens. Diese
+            verschiebt das Alphabet um 7 stellen.
           </div>
         </div>
       </div>
     </div>
   </div>
-  <!-- Cäsar ENDE -->
-  <!-- Vigenere -->
-  <div class="row spacer">
-    <div class="col-md col-sm">
-      <div class="card">
-        <div class="card-header">
-          Viginere
-        </div>
-        <div class="card-body">
-          <div class="row">
-            <!-- Text incl.DEMO -->
-            <div class="col-xl">
-              Das Viginere System ist komplizierter als das Cäsar verfahren,
-              jedoch nicht unknackbar. Beim Viginere verfahren wird ein
-              Schlüssel benötigt. Dieser Schlüssel wird zum Codieren sowie dem
-              Decodieren verwendet.<br />
-              Jedem Buchstaben wird ein Buchstabe des Schlüssels zugewiesen.
-              Falls der Schlüssel kleiner ist als der Geheimtext wird der
-              Schlüssel soweit wiederholt, bis alle Buchstaben des Textes
-              einen Buchstaben des Schlüssels zugewiesen bekommen haben.
-              Bsp:<br />
-              <b>
-                GEHEIMTEXT<br />
-                TEXTTEXTTEX<br />
-              </b>
-              Wie man auf dem Bild schon erkennen kann, ist es Praktisch eine
-              Übersetzungstabelle. Man wählt nun den Buchstaben G aus markiert
-              sich dann die Spalte des G´s. Danach nimmt man sich das T vor
-              und markiert sich die Zeile des T´s. Der Buchstabe am
-              Kreuzungspunkt ist nun der neue Buchstabe. Dies führt man für
-              jeden Buchstaben des zu verschlüsselnen Textes durch und hat
-              dann die Verschlüsselte Nachricht.<br />
-              In der Demo werden spaces herausgefiltert und im falle des
-              Inputs wieder eingesetzt. Spaces im Key werden missachtet. Beide
-              Strings werden zu Uppercase convertiert, da sonst der
-              Algorithmus seine einfachkeit verliert (Schau zwecke).<br />
-              (Randinfo: Das Beispiel von Uwe Debacher ist fehlerhaft und
-              filtert keine Leerzeichen, was zur verkomplizierung führt.)
-              <div class="row">
-                <div class="col-md mt-2">
-                  <input class="form-control" id="viginereInput" placeholder="Input" />
-                </div>
-                <div class="col-md mt-2">
-                  <input class="form-control" id="viginereKey" placeholder="Key" />
-                </div>
-                <div class="col-md mt-2">
-                  <input class="form-control" id="viginereOutput" placeholder="Output" disabled="disabled" />
-                </div>
-                <div class="col-md">
-                  <div class="row">
-                    <div class="col-md mt-2 text-center">
-                      <button class="btn btn-primary" style="width:120px;" id="viginereCodieren">
-                        Codieren
-                      </button>
-                    </div>
-                    <div class="col-md mt-2 text-center">
-                      <button class="btn btn-primary" style="width:120px;" id="viginereDecodieren">
-                        Decodieren
-                      </button>
-                    </div>
-                    <div class="col-md mt-2 text-center">
-                      <button class="btn btn-primary" style="width:120px;" id="viginereSwap">
-                        Swappen
-                      </button>
-                    </div>
+</div>
+<!-- Cäsar ENDE -->
+<!-- Vigenere -->
+<div class="row spacer">
+  <div class="col-md col-sm">
+    <div class="card">
+      <div class="card-header">
+        Viginere
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <!-- Text incl.DEMO -->
+          <div class="col-xl">
+            Das Viginere System ist komplizierter als das Cäsar verfahren,
+            jedoch nicht unknackbar. Beim Viginere verfahren wird ein
+            Schlüssel benötigt. Dieser Schlüssel wird zum Codieren sowie dem
+            Decodieren verwendet.<br/>
+            Jedem Buchstaben wird ein Buchstabe des Schlüssels zugewiesen.
+            Falls der Schlüssel kleiner ist als der Geheimtext wird der
+            Schlüssel soweit wiederholt, bis alle Buchstaben des Textes
+            einen Buchstaben des Schlüssels zugewiesen bekommen haben.
+            Bsp:<br/>
+            <b>
+              GEHEIMTEXT<br/>
+              TEXTTEXTTEX<br/>
+            </b>
+            Wie man auf dem Bild schon erkennen kann, ist es Praktisch eine
+            Übersetzungstabelle. Man wählt nun den Buchstaben G aus markiert
+            sich dann die Spalte des G´s. Danach nimmt man sich das T vor
+            und markiert sich die Zeile des T´s. Der Buchstabe am
+            Kreuzungspunkt ist nun der neue Buchstabe. Dies führt man für
+            jeden Buchstaben des zu verschlüsselnen Textes durch und hat
+            dann die Verschlüsselte Nachricht.<br/>
+            In der Demo werden spaces herausgefiltert und im falle des
+            Inputs wieder eingesetzt. Spaces im Key werden missachtet. Beide
+            Strings werden zu Uppercase convertiert, da sonst der
+            Algorithmus seine einfachkeit verliert (Schau zwecke).<br/>
+            (Randinfo: Das Beispiel von Uwe Debacher ist fehlerhaft und
+            filtert keine Leerzeichen, was zur verkomplizierung führt.)
+            <div class="row">
+              <div class="col-md mt-2">
+                <label for="viginereInput"></label>
+                <input class="form-control" id="viginereInput" placeholder="Input"/>
+              </div>
+              <div class="col-md mt-2">
+                <label for="viginereKey"></label>
+                <input class="form-control" id="viginereKey" placeholder="Key"/>
+              </div>
+              <div class="col-md mt-2">
+                <label for="viginereOutput"></label>
+                <input class="form-control" id="viginereOutput" placeholder="Output" disabled="disabled"/>
+              </div>
+              <div class="col-md">
+                <div class="row">
+                  <div class="col-md mt-2 text-center">
+                    <button class="btn btn-primary" style="width:120px;" id="viginereCodieren">
+                      Codieren
+                    </button>
+                  </div>
+                  <div class="col-md mt-2 text-center">
+                    <button class="btn btn-primary" style="width:120px;" id="viginereDecodieren">
+                      Decodieren
+                    </button>
+                  </div>
+                  <div class="col-md mt-2 text-center">
+                    <button class="btn btn-primary" style="width:120px;" id="viginereSwap">
+                      Swappen
+                    </button>
                   </div>
                 </div>
               </div>
             </div>
-            <!-- Text incl. demo ende -->
-            <!-- img -->
-            <div class="col-xl-3 text-center">
-              <img src="img/VigenereAutokey1.jpg" class="img-fluid rounded"
-                style="margin-left:auto;margin-right:auto;" />
-            </div>
-            <!-- img ende -->
           </div>
+          <!-- Text incl. demo ende -->
+          <!-- img -->
+          <div class="col-xl-3 text-center">
+            <img src="img/VigenereAutokey1.jpg" class="img-fluid rounded"
+                 style="margin-left:auto;margin-right:auto;"
+                 alt="Viginere Tabelle"/>
+          </div>
+          <!-- img ende -->
         </div>
-        <div class="card-footer">
-          Grundidee aus Uwe Debachers Dokument entnommen, auch wenn der
-          Algorithmus fehlerhaft ist (Algorithmus selber angepasst)
-        </div>
+      </div>
+      <div class="card-footer">
+        Grundidee aus Uwe Debachers Dokument entnommen, auch wenn der
+        Algorithmus fehlerhaft ist (Algorithmus selber angepasst)
       </div>
     </div>
   </div>
-  <!-- Vigenere ENDE -->
-  <div class="row spacer">
-    <div class="col-md col-sm">
-      <div class="card">
-        <div class="card-header">
-          RSA-Algorithmus
+</div>
+<!-- Vigenere ENDE -->
+<div class="row spacer">
+  <div class="col-md col-sm">
+    <div class="card">
+      <div class="card-header">
+        RSA-Algorithmus
+      </div>
+      <div class="card-body">
+        Der RSA Algorithmus ist ein Mathematisch komplexer Algorithmus. Mithilfe von Mathematischen Operationen wird
+        ein "public" und ein "private" Schlüssel erstellt. Dabei sind ist der "public" und der "private" Key abhängig,
+        da aus dem "public" Key der "private" Key generiert wird. Im folgenden sieht man die Schritte, die der
+        Algorithmus durch läuft:<br>
+        <div class="code-block">
+          <ol>
+            <li>2 Primzahlen wählen: p&q</li>
+            <li>N berechnen: p*q=N</li>
+            <li>&phi;(N)=(p-1)*(q-1) (Eulersche Funktion)</li>
+            <li>Teilerfremde Zahl zu &phi;(N) finden. Bedingung: 1&lt;e&lt;&phi;(N)</li>
+            <li>e*d mod(&phi;(N))=1 (d wird gesucht)</li>
+          </ol>
         </div>
-        <div class="card-body">
-          Der RSA Algorithmus ist ein Mathematisch komplexer Algorithmus. Mithilfe von Mathematischen Operationen wird
-          ein "public" und ein "private" Schlüssel erstellt. Dabei sind ist der "public" und der "private" Key abhängig,
-          da aus dem "public" Key der "private" Key generiert wird. Im folgenden sieht man die Schritte, die der
-          Algorithmus durch läuft:<br>
-          <div class="code-block">
-            <ol>
-              <li>2 Primzahlen wählen: p&q</li>
-              <li>N berechnen: p*q=N</li>
-              <li>&phi;(N)=(p-1)*(q-1) (Eulersche Funktion)</li>
-              <li>Teilerfremde Zahl zu &phi;(N) finden. Bedingung: 1&lt;e&lt;&phi;(N)</li>
-              <li>e*d mod(&phi;(N))=1 (d wird gesucht)</li>
-            </ol>
-          </div><br>
-          Private Key:(N;d)<br>
-          Public Key: (N;e)<br><br>
-          Verschlüsselt wird durch (m= Nachricht,c=Verschlüsselt)<br>
-          <div class="code-block">
-            c = m<sup>e</sup> mod(N)
-          </div>
-          Entschlüsselt wird mit<br>
-          <div class="code-block">
-            m = c<sup>d</sup> mod(N)
-          </div><br>
-          Anmerkung: Aufgrund von einem datatype Overflows und fehlender Präzision der Verwendeten Datentypen wurde eine
-          Funktion zum verschlüsseln verwendet, die höhere Mathematik verwendet um die Zahlen kleiner zu halten.
-          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#RSAModal">
-            Launch demo modal
-          </button>
+        <br>
+        Private Key:(N;d)<br>
+        Public Key: (N;e)<br><br>
+        Verschlüsselt wird durch (m= Nachricht,c=Verschlüsselt)<br>
+        <div class="code-block">
+          c = m<sup>e</sup> mod(N)
         </div>
+        Entschlüsselt wird mit<br>
+        <div class="code-block">
+          m = c<sup>d</sup> mod(N)
+        </div>
+        <br>
+        Anmerkung: Aufgrund von einem datatype Overflows und fehlender Präzision der Verwendeten Datentypen wurde eine
+        Funktion zum verschlüsseln verwendet, die höhere Mathematik verwendet um die Zahlen kleiner zu halten.
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#RSAModal">
+          Launch demo modal
+        </button>
+      </div>
 
-        <div class="card-footer">
-          <a href="https://de.wikipedia.org/wiki/RSA-Kryptosystem">Wikipedia</a> + Student
+      <div class="card-footer">
+        <a href="https://de.wikipedia.org/wiki/RSA-Kryptosystem">Wikipedia</a> + Student
 
-        </div>
       </div>
     </div>
   </div>
+</div>
 </body>
 
 <body>
-  <div class="modal fade" id="RSAModal">
-    <div class="modal-dialog modal-xl">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h4>RSA-Algorithmus</h4>
-          <button type="button" class="close" data-dismiss="modal">
-            <span>&times;</span></button>
-        </div>
-        <div class="modal-body">
-          <div class="row">
-            <div class="col-md-2">
-              <label for="componentp">p:</label>
-              <input class="form-control" id="componentp" readonly />
-            </div>
-            <div class="col-md-2">
-              <label for="componentq">q:</label>
-              <input class="form-control" id="componentq" readonly />
-            </div>
-            <div class="col-md-2">
-              <label for="componentN">N:</label>
-              <input class="form-control" id="componentN" />
-            </div>
-            <div class="col-md-2">
-              <label for="componentphiN">&phi;(N):</label>
-              <input class="form-control" id="componentphiN" readonly />
-            </div>
-            <div class="col-md-2">
-              <label for="componente">e:</label>
-              <input class="form-control" id="componente" />
-            </div>
-            <div class="col-md-2">
-              <label for="componente">d:</label>
-              <input class="form-control" id="componentd" />
-            </div>
+<div class="modal fade" id="RSAModal">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4>RSA-Algorithmus</h4>
+        <button type="button" class="close" data-dismiss="modal">
+          <span>&times;</span></button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md-2">
+            <label for="componentp">p:</label>
+            <input class="form-control" id="componentp" readonly/>
           </div>
-          <div class="row">
-            <div class="col-md-2">
-              <label for="privateKey">Privater Schlüssel</label>
-              <input class="form-control" id="privateKey" readonly />
-            </div>
-            <div class="col-md-2">
-              <label for="publicKey">Öffentlicher Schlüssel</label>
-              <input class="form-control" id="publicKey" readonly />
-            </div>
-            <div class="col-md">
-              <label for="generateRSA">&nbsp;</label>
-              <button class="btn btn-primary btn-block" id="generateRSA">Generieren</button>
-            </div>
+          <div class="col-md-2">
+            <label for="componentq">q:</label>
+            <input class="form-control" id="componentq" readonly/>
           </div>
-          <div class="row">
-            <div class="col-md">
-              <label for="text">Text:</label>
-              <textarea id="text" class="form-control" rows="3"></textarea>
-            </div>
-            <div class="col-md">
-              <label for="encrypted">Verschlüsselt:</label>
-              <textarea id="encrypted" class="form-control" rows="3"></textarea>
-            </div>
+          <div class="col-md-2">
+            <label for="componentN">N:</label>
+            <input class="form-control" id="componentN"/>
+          </div>
+          <div class="col-md-2">
+            <label for="componentphiN">&phi;(N):</label>
+            <input class="form-control" id="componentphiN" readonly/>
+          </div>
+          <div class="col-md-2">
+            <label for="componente">e:</label>
+            <input class="form-control" id="componente"/>
+          </div>
+          <div class="col-md-2">
+            <label for="componentd">d:</label>
+            <input class="form-control" id="componentd"/>
           </div>
         </div>
-        <div class="modal-footer">
-         
-          <button class="btn btn-primary" data-dismiss="modal">Schließen</button>
+        <div class="row">
+          <div class="col-md-2">
+            <label for="privateKey">Privater Schlüssel</label>
+            <input class="form-control" id="privateKey" readonly/>
+          </div>
+          <div class="col-md-2">
+            <label for="publicKey">Öffentlicher Schlüssel</label>
+            <input class="form-control" id="publicKey" readonly/>
+          </div>
+          <div class="col-md">
+            <label for="generateRSA">&nbsp;</label>
+            <button class="btn btn-primary btn-block" id="generateRSA">Generieren</button>
+          </div>
         </div>
+        <div class="row">
+          <div class="col-md">
+            <label for="text">Text:</label>
+            <textarea id="text" class="form-control" rows="3"></textarea>
+          </div>
+          <div class="col-md">
+            <label for="encrypted">Verschlüsselt:</label>
+            <textarea id="encrypted" class="form-control" rows="3"></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+
+        <button class="btn btn-primary" data-dismiss="modal">Schließen</button>
       </div>
     </div>
   </div>
+</div>
 </body>
 <footer>
   <div class="col-md-5 col-centered text-center">
     Aufgrund der komplexität und der Interaktiviät der Algorithmen wurden
     Frameworks verwendet. Z.b. wird JQuery zum Eventlistener. <a
-      href="img/WhatsApp Image 2019-10-18 at 21.09.39.jpeg">Bootstrap</a> wurde
+    href="img/WhatsApp Image 2019-10-18 at 21.09.39.jpeg">Bootstrap</a> wurde
     fürs Design verwendet.
   </div>
 </footer>
@@ -296,150 +304,150 @@
 </html>
 
 <script type="text/javascript">
-  $('#generateRSA').on("click", function () {
-    KeyGen();
-    encrypt();
-  });
-  $('#text').on('input', function () {
-    encrypt();
-  });
-  $("#CäsarCodieren").on("click", function () {
-    var Input = $("#inputCäsar").val();
-    var Output = "";
-    for (var i in Input) {
-      var KeyCode = Input.charCodeAt(i);
-      if (KeyCode > 96 && KeyCode < 116) {
-        KeyCode = KeyCode + 7;
-        Output += String.fromCharCode(KeyCode);
-      } else if (KeyCode > 115 && KeyCode < 123) {
-        KeyCode = KeyCode - 26 + 7;
-        Output += String.fromCharCode(KeyCode);
-      } else if (KeyCode > 64 && KeyCode < 84) {
-        KeyCode = KeyCode + 7;
-        Output += String.fromCharCode(KeyCode);
-      } else if (KeyCode > 83 && KeyCode < 91) {
-        KeyCode = KeyCode - 26 + 7;
-        Output += String.fromCharCode(KeyCode);
-      } /* Zahlenverschiebung noch nicht vorhanden */ else {
-        Output += String.fromCharCode(KeyCode);
-      }
+    $('#generateRSA').on("click", function () {
+        KeyGen();
+        encrypt();
+    });
+    $('#text').on('input', function () {
+        encrypt();
+    });
+    $("#CäsarCodieren").on("click", function () {
+        let Input = $("#inputCäsar").val();
+        let Output = "";
+        for (let i in Input) {
+            let KeyCode = Input.charCodeAt(i);
+            if (KeyCode > 96 && KeyCode < 116) {
+                KeyCode = KeyCode + 7;
+                Output += String.fromCharCode(KeyCode);
+            } else if (KeyCode > 115 && KeyCode < 123) {
+                KeyCode = KeyCode - 26 + 7;
+                Output += String.fromCharCode(KeyCode);
+            } else if (KeyCode > 64 && KeyCode < 84) {
+                KeyCode = KeyCode + 7;
+                Output += String.fromCharCode(KeyCode);
+            } else if (KeyCode > 83 && KeyCode < 91) {
+                KeyCode = KeyCode - 26 + 7;
+                Output += String.fromCharCode(KeyCode);
+            } /* Zahlenverschiebung noch nicht vorhanden */ else {
+                Output += String.fromCharCode(KeyCode);
+            }
+        }
+        $("#outputCäsar").val(Output);
+    });
+
+    $("#viginereCodieren").on("click", function () {
+        viginereCodieren();
+    });
+
+    $("#viginereDecodieren").on("click", function () {
+        viginereDecodieren();
+    });
+
+    function viginereDecodieren() {
+        let input = $("#viginereInput").val();
+        let key = $("#viginereKey").val();
+        let output = "";
+        let spacesInput = [];
+
+        for (let i in input) {
+            if (/^\s$/.test(input[i])) {
+                spacesInput.push(i);
+            }
+        }
+
+        input = input.replace(/\s/g, "");
+        key = key.replace(/\s/g, "");
+
+        input = input.toUpperCase();
+        key = key.toUpperCase();
+
+        for (let i in input) {
+            let char = input[i];
+            char = char.charCodeAt(0);
+
+            let key2;
+
+            key2 = key[i % key.length];
+            key2 = key2.charCodeAt(0);
+            key2 -= 65;
+            if (char > 64 && char < 91) {
+                char -= key2;
+                if (char > 89) {
+                    char -= 26;
+                }
+                if (char < 65) {
+                    char += 26;
+                }
+            }
+            char = String.fromCharCode(char);
+            output += char;
+            for (let a in spacesInput) {
+                let z = parseInt(i);
+                z++;
+                if (spacesInput[a] == z) {
+                    output += " ";
+                }
+            }
+        }
+        $("#viginereOutput").val(output);
     }
-    $("#outputCäsar").val(Output);
-  });
 
-  $("#viginereCodieren").on("click", function () {
-    viginereCodieren();
-  });
+    function viginereCodieren() {
+        console.log(2);
+        let input = $("#viginereInput").val();
+        let key = $("#viginereKey").val();
+        let output = "";
+        let spacesInput = [];
 
-  $("#viginereDecodieren").on("click", function () {
-    viginereDecodieren();
-  });
+        for (let i in input) {
+            if (/^\s$/.test(input[i])) {
+                spacesInput.push(i);
+            }
+        }
+        input = input.replace(/\s/g, "");
+        key = key.replace(/\s/g, "");
 
-  function viginereDecodieren() {
-    var input = $("#viginereInput").val();
-    var key = $("#viginereKey").val();
-    var output = "";
-    var spacesInput = [];
+        input = input.toUpperCase();
+        key = key.toUpperCase();
+        for (let i in input) {
+            let char = input[i];
+            char = char.charCodeAt(0);
 
-    for (var i in input) {
-      if (/^\s$/.test(input[i])) {
-        spacesInput.push(i);
-      }
+            let key2;
+
+            key2 = key[i % key.length];
+            key2 = key2.charCodeAt(0);
+            key2 -= 65;
+            if (char > 64 && char < 91) {
+                char += key2;
+                if (char > 89) {
+                    char -= 26;
+                }
+                if (char < 65) {
+                    char += 26;
+                }
+            }
+            char = String.fromCharCode(char);
+
+            output += char;
+            for (let a in spacesInput) {
+                let z = parseInt(i);
+                z++;
+                console.log(z);
+                if (spacesInput[a] == z) {
+                    output += " ";
+                }
+            }
+        }
+        $("#viginereOutput").val(output);
     }
 
-    input = input.replace(/\s/g, "");
-    key = key.replace(/\s/g, "");
-
-    input = input.toUpperCase();
-    key = key.toUpperCase();
-
-    for (var i in input) {
-      var char = input[i];
-      char = char.charCodeAt(0);
-
-      var key2;
-
-      key2 = key[i % key.length];
-      key2 = key2.charCodeAt(0);
-      key2 -= 65;
-      if (char > 64 && char < 91) {
-        char -= key2;
-        if (char > 89) {
-          char -= 26;
-        }
-        if (char < 65) {
-          char += 26;
-        }
-      }
-      char = String.fromCharCode(char);
-      output += char;
-      for (var a in spacesInput) {
-        var z = parseInt(i);
-        z++;
-        if (spacesInput[a] == z) {
-          output += " ";
-        }
-      }
-    }
-    $("#viginereOutput").val(output);
-  }
-
-  function viginereCodieren() {
-    console.log(2);
-    var input = $("#viginereInput").val();
-    var key = $("#viginereKey").val();
-    var output = "";
-    var spacesInput = [];
-
-    for (var i in input) {
-      if (/^\s$/.test(input[i])) {
-        spacesInput.push(i);
-      }
-    }
-    input = input.replace(/\s/g, "");
-    key = key.replace(/\s/g, "");
-
-    input = input.toUpperCase();
-    key = key.toUpperCase();
-    for (var i in input) {
-      var char = input[i];
-      char = char.charCodeAt(0);
-
-      var key2;
-
-      key2 = key[i % key.length];
-      key2 = key2.charCodeAt(0);
-      key2 -= 65;
-      if (char > 64 && char < 91) {
-        char += key2;
-        if (char > 89) {
-          char -= 26;
-        }
-        if (char < 65) {
-          char += 26;
-        }
-      }
-      char = String.fromCharCode(char);
-
-      output += char;
-      for (var a in spacesInput) {
-        var z = parseInt(i);
-        z++;
-        console.log(z);
-        if (spacesInput[a] == z) {
-          output += " ";
-        }
-      }
-    }
-    $("#viginereOutput").val(output);
-  }
-
-  $('#viginereSwap').on('click', function () {
-    var Output = $('#viginereOutput').val();
-    console.log("hey");
-    var Input = $('#viginereInput').val();
-    $('#viginereOutput').val(Input);
-    $('#viginereInput').val(Output);
-  });
+    $('#viginereSwap').on('click', function () {
+        let Output = $('#viginereOutput').val();
+        console.log("hey");
+        let Input = $('#viginereInput').val();
+        $('#viginereOutput').val(Input);
+        $('#viginereInput').val(Output);
+    });
 </script>
 <script src="scripts/RSA.js"></script>
