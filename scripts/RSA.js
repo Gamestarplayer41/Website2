@@ -30,7 +30,7 @@ function primeToPhi(primeArray, phi) {
 
     let randomNum = (Math.random() * Math.floor(primeArray.length));
     randomNum = Math.round(randomNum);
-    if (phi != primeArray[randomNum] && primeArray[randomNum] < phi) {
+    if (phi !== primeArray[randomNum] && primeArray[randomNum] < phi) {
         return primeArray[randomNum];
     } else if (primeArray[randomNum + 1] < phi) {
         return primeArray[randomNum + 1];
@@ -45,8 +45,7 @@ function calcD(e, phiN) {
     let k = 1;
     while (true) {
         d = (1 + k * phiN) / e;
-        if (d == parseInt(d)) {
-            console.log(k);
+        if (d === parseInt(d)) {
             break;
 
         } else if (k > 10000) {
@@ -72,13 +71,7 @@ function RSAAlgo() {
     let e = primeToPhi(primeArray, phiN);
     let d = calcD(e, phiN);
 
-    /*  console.log(p);
-     console.log(q);
-     console.log(n);
-     console.log(phiN);
-     console.log(e);
-     console.log(d); */
-    if (p != undefined && q != undefined && n != undefined && phiN != undefined && e != undefined && d != undefined && p != q) {
+    if (p !== undefined && q !== undefined && n !== undefined && phiN !== undefined && e !== undefined && d !== undefined && p !== q) {
         return [p, q, n, phiN, e, d];
     } else {
         return [0, 0, 0, 0, 0, -1];
@@ -89,7 +82,7 @@ function KeyGen() {
     let values;
     while (true) {
         values = RSAAlgo();
-        if (values[5] != -1) {
+        if (values[5] !== -1) {
             break;
         }
     }
@@ -105,7 +98,7 @@ function KeyGen() {
 }
 
 function encrypt() {
-    if ($('#text').val()) {
+    if ($('#text').val() && $('#componentN').val()!=""&&$('#componente').val()!=="") {
         let N = $('#componentN').val();
         N = parseInt(N);
         let e = $('#componente').val();

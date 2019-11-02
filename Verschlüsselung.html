@@ -69,7 +69,7 @@
             <input class="form-control" type="text" placeholder="OUTPUT" id="outputCäsar" readonly/>
           </div>
           <div class="col-md-2 col-sm-2 py-2">
-            <button type="button" class="btn btn-primary px-3 " id="CäsarCodieren">
+            <button type="button" class="btn btn-primary px-3 mt-2 " id="CäsarCodieren">
               Codieren
             </button>
           </div>
@@ -393,7 +393,6 @@
     }
 
     function viginereCodieren() {
-        console.log(2);
         let input = $("#viginereInput").val();
         let key = $("#viginereKey").val();
         let output = "";
@@ -433,7 +432,7 @@
             for (let a in spacesInput) {
                 let z = parseInt(i);
                 z++;
-                console.log(z);
+
                 if (spacesInput[a] === z) {
                     output += " ";
                 }
@@ -444,7 +443,7 @@
 
     $('#viginereSwap').on('click', function () {
         let Output = $('#viginereOutput').val();
-        console.log("hey");
+
         let Input = $('#viginereInput').val();
         $('#viginereOutput').val(Input);
         $('#viginereInput').val(Output);
